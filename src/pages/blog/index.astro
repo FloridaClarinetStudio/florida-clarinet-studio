@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout title="Blog" description="Advice, gear notes, listening recommendations, and studio updates.">
+	<section class="content-page">
+		<header>
+			<p class="kicker">Studio Notes</p>
+			<h1>Blog</h1>
+			<p class="lede">Advice, recommendations, and updates from Florida Clarinet Studio.</p>
+		</header>
+		<ul class="post-list">
+			{
+				posts.map((post) => (
+					<li class="card">
+						<h2><a href={`/blog/${post.id.replace(/\.(md|mdx)$/, '')}/`}>{post.data.title}</a></h2>
+						<p>{post.data.description}</p>
+						<small>{post.data.pubDate.toLocaleDateString('en-US')}</small>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</BaseLayout>

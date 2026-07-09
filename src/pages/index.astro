@@ -1,17 +1,67 @@
 ---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../lib/site';
 
+const home = await getEntry('pages', 'home');
+const Content = home ? (await render(home)).Content : undefined;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={site.name} description={home?.data.description ?? site.description}>
+	<section class="hero">
+		<div class="hero-inner">
+			<div>
+				<p class="kicker">Serving the Space Coast and beyond</p>
+				<h1>{site.name}</h1>
+				<p class="lede">
+					Tailored clarinet, saxophone, woodwind, and musicianship lessons built around each
+					student's goals.
+				</p>
+				<div class="actions">
+					<a class="button" href="/clarinet-lessons/">Explore lessons</a>
+					<a class="button secondary" href={`mailto:${site.email}`}>Contact the studio</a>
+				</div>
+			</div>
+			<aside class="hero-panel" aria-label="Studio contact information">
+				<h2>Start here</h2>
+				<ul class="fact-list">
+					<li><span>Phone</span><strong>{site.phone}</strong></li>
+					<li><span>Email</span><strong>{site.email}</strong></li>
+					<li><span>Studio</span><strong>Palm Bay, FL</strong></li>
+					<li><span>Options</span><strong>In studio, in home, online</strong></li>
+				</ul>
+			</aside>
+		</div>
+	</section>
+
+	<section class="section">
+		<p class="kicker">Lesson paths</p>
+		<h2>Designed to take students from good to great.</h2>
+		<div class="grid">
+			<article class="card">
+				<h3>Clarinet Lessons</h3>
+				<p>Audition preparation, fundamentals, tone, technique, and confidence for beginners through advanced players.</p>
+			</article>
+			<article class="card">
+				<h3>Saxophone Lessons</h3>
+				<p>Classical and jazz saxophone coaching with the same goal-focused approach used across the studio.</p>
+			</article>
+			<article class="card">
+				<h3>Band Director Mentoring</h3>
+				<p>Clinics, sectionals, listening support, leadership training, and practical woodwind guidance.</p>
+			</article>
+		</div>
+	</section>
+
+	{
+		Content && (
+			<section class="band">
+				<div class="content-page">
+					<article>
+						<Content />
+					</article>
+				</div>
+			</section>
+		)
+	}
+</BaseLayout>

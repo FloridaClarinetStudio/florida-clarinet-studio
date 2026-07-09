@@ -8,10 +8,12 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "import:wordpress": "node scripts/import-wordpress.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^7.0.2",
     "astro": "^7.0.7"
   }
 }
