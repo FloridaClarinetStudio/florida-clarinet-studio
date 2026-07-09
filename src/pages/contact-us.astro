@@ -1,0 +1,101 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { images, site } from '../lib/site';
+
+const page = await getEntry('pages', 'contact-us');
+const Content = page ? (await render(page)).Content : undefined;
+const title = page?.data.seo?.title ?? page?.data.title ?? 'Contact Florida Clarinet Studio';
+const description =
+	page?.data.seo?.description ??
+	page?.data.description ??
+	'Contact Florida Clarinet Studio for clarinet, saxophone, woodwind, and musicianship lessons.';
+---
+
+<BaseLayout title={title} description={description}>
+	<section class="page-hero">
+		<img src={images.instruments.src} alt={images.instruments.alt} loading="eager" />
+		<div class="page-hero-content">
+			<p class="kicker">Contact</p>
+			<h1>{title}</h1>
+			<p class="lede">{description}</p>
+		</div>
+	</section>
+
+	<section class="content-page">
+		{Content && <Content />}
+
+		<div class="contact-layout">
+			<form
+				class="contact-form"
+				name="studio-contact"
+				method="POST"
+				action="/contact-thank-you/"
+				data-netlify="true"
+				netlify-honeypot="bot-field"
+			>
+				<input type="hidden" name="form-name" value="studio-contact" />
+				<p class="hidden-field">
+					<label>Do not fill this out if you are human: <input name="bot-field" /></label>
+				</p>
+
+				<div class="form-row">
+					<label for="name">Name</label>
+					<input id="name" name="name" type="text" autocomplete="name" required />
+				</div>
+
+				<div class="form-row">
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email" autocomplete="email" required />
+				</div>
+
+				<div class="form-row">
+					<label for="phone">Phone</label>
+					<input id="phone" name="phone" type="tel" autocomplete="tel" />
+				</div>
+
+				<div class="form-row">
+					<label for="student-age">Student age or grade</label>
+					<input id="student-age" name="student-age" type="text" />
+				</div>
+
+				<div class="form-row">
+					<label for="lesson-interest">What are you interested in?</label>
+					<select id="lesson-interest" name="lesson-interest" required>
+						<option value="">Choose one</option>
+						<option>Clarinet lessons</option>
+						<option>Saxophone lessons</option>
+						<option>Audition preparation</option>
+						<option>Band director mentoring</option>
+						<option>Online lessons</option>
+						<option>Other</option>
+					</select>
+				</div>
+
+				<div class="form-row">
+					<label for="message">How can we help?</label>
+					<textarea id="message" name="message" rows="6" required></textarea>
+				</div>
+
+				<button class="button" type="submit">Send message</button>
+			</form>
+
+			<aside class="contact-details">
+				<h2>Studio Contact</h2>
+				<ul>
+					<li><strong>Phone</strong><a href={`tel:${site.phone.replaceAll('-', '')}`}>{site.phone}</a></li>
+					<li><strong>Email</strong><a href={`mailto:${site.email}`}>{site.email}</a></li>
+					<li><strong>Studio</strong><span>{site.address}</span></li>
+					<li><strong>Service areas</strong><span>Palm Bay, Melbourne, Viera, the Space Coast, and online</span></li>
+				</ul>
+
+				<h2>Studio Hours</h2>
+				<ul>
+					<li><strong>Monday-Friday</strong><span>9 AM - 9 PM</span></li>
+					<li><strong>Saturday</strong><span>9 AM - 5 PM</span></li>
+					<li><strong>Sunday</strong><span>9 AM - 9 PM</span></li>
+				</ul>
+			</aside>
+		</div>
+	</section>
+</BaseLayout>

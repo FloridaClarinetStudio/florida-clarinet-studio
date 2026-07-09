@@ -4,7 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { pageImages } from '../lib/site';
 
 export async function getStaticPaths() {
-	const pages = await getCollection('pages', ({ id, data }) => id !== 'home' && !data.draft);
+	const pages = await getCollection(
+		'pages',
+		({ id, data }) => !['home', 'contact-us'].includes(id) && !data.draft,
+	);
 
 	return pages.map((page) => ({
 		params: { slug: page.id.replace(/\.(md|mdx)$/, '') },
