@@ -19,3 +19,63 @@ export const navigation = [
 	{ href: '/blog/', label: 'Blog' },
 	{ href: '/contact-us/', label: 'Contact' },
 ];
+
+export const images = {
+	instruments: {
+		src: '/images/original/instruments.jpg',
+		alt: 'Clarinets, saxophones, and music books inside the Florida Clarinet Studio lesson room',
+	},
+	studioCase: {
+		src: '/images/original/studio-case.jpg',
+		alt: 'A clarinet arranged inside a blue-lined instrument case',
+	},
+	bandListening: {
+		src: '/images/original/band-listening.jpg',
+		alt: 'A concert band performing on stage',
+	},
+	haroldWright: {
+		src: '/images/original/harold-wright.jpg',
+		alt: 'Clarinetist Harold Wright',
+	},
+	robertMarcellus: {
+		src: '/images/original/robert-marcellus.jpg',
+		alt: 'Clarinetist Robert Marcellus',
+	},
+	vandorenReeds: {
+		src: '/images/original/vandoren-clarinet-reeds.jpg',
+		alt: 'Vandoren clarinet reeds',
+	},
+	clarinetStand: {
+		src: '/images/original/clarinet-stand.jpg',
+		alt: 'A folding clarinet stand',
+	},
+	mrRyon: {
+		src: '/images/original/mr-ryon.jpg',
+		alt: 'Mr. Robin Ryon smiling with two students',
+	},
+};
+
+export const pageImages = {
+	'about-us': images.instruments,
+	'band-director-listening-list': images.bandListening,
+	'childrens-music-school': images.vandorenReeds,
+	'clarinet-lessons': images.studioCase,
+	'contact-us': images.instruments,
+	'faq-page': images.studioCase,
+	'meat-the-team': images.haroldWright,
+	'my-web-site-recommendations': images.instruments,
+};
+
+export const blogImages = {
+	'al3-alto-saxophone-mouth-piece': images.studioCase,
+	'clarinet-stand': images.clarinetStand,
+	'daddario-reserve-x10-bb-clarinet-mouthpiece': images.studioCase,
+	'hite-alto-saxophone-mouth-piece': images.studioCase,
+	'hite-bb-clarinet-mouthpiece': images.studioCase,
+	'la-tromba-cork-grease': images.studioCase,
+	'manhasset-music-stand': images.clarinetStand,
+	'the-amazing-reed-geek': images.vandorenReeds,
+	'vandoren-alto-sax-reeds-2': images.vandorenReeds,
+	'vandoren-alto-saxophone-reeds': images.vandorenReeds,
+	'vandoren-clarinet-reeds': images.vandorenReeds,
+};

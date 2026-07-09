@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { pageImages } from '../lib/site';
 
 export async function getStaticPaths() {
 	const pages = await getCollection('pages', ({ id, data }) => id !== 'home' && !data.draft);
@@ -14,15 +15,20 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 const { Content } = await render(page);
 const description = page.data.seo?.description ?? page.data.description;
+const slug = page.id.replace(/\.(md|mdx)$/, '');
+const image = pageImages[slug as keyof typeof pageImages];
 ---
 
 <BaseLayout title={page.data.seo?.title ?? page.data.title} description={description}>
-	<section class="content-page">
-		<header>
+	<section class="page-hero">
+		{image && <img src={image.src} alt={image.alt} loading="eager" />}
+		<div class="page-hero-content">
 			<p class="kicker">{page.data.navTitle ?? 'Page'}</p>
 			<h1>{page.data.title}</h1>
 			{page.data.description && <p class="lede">{page.data.description}</p>}
-		</header>
+		</div>
+	</section>
+	<section class="content-page">
 		<article>
 			<Content />
 		</article>

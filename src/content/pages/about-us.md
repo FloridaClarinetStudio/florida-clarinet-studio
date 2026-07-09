@@ -14,6 +14,11 @@ For more than three decades, the studio has specialized in Bb clarinet, Eb clari
 
 ## Meet Mr. Ryon
 
+<figure class="content-image wide">
+  <img src="/images/original/mr-ryon.jpg" alt="Mr. Robin Ryon smiling with two students" loading="lazy" />
+  <figcaption>Mr. Robin Ryon with Florida Clarinet Studio students.</figcaption>
+</figure>
+
 Robin Ryon was raised in Baltimore, Maryland, and has lived in Florida since July 2001. In high school and college, he studied with members of the Baltimore Symphony Orchestra clarinet section, including weekly lessons with Christopher Wolfe and Edward Palanker.
 
 Mr. Ryon received his Bachelor of Science in Music Education from Towson University. Since 2006, he has run Florida Clarinet Studio full time, teaching private students each week and working with high school, middle school, college, adult, and school band musicians. Zoom lessons were added to the studio in 2017.

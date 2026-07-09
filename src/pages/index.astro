@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site } from '../lib/site';
+import { images, site } from '../lib/site';
 
 const home = await getEntry('pages', 'home');
 const Content = home ? (await render(home)).Content : undefined;
@@ -11,11 +11,11 @@ const Content = home ? (await render(home)).Content : undefined;
 	<section class="hero">
 		<div class="hero-inner">
 			<div>
-				<p class="kicker">Serving the Space Coast and beyond</p>
-				<h1>{site.name}</h1>
+				<p class="kicker">Palm Bay, Melbourne, Viera, and online</p>
+				<h1>Clarinet lessons with a higher ceiling.</h1>
 				<p class="lede">
-					Tailored clarinet, saxophone, woodwind, and musicianship lessons built around each
-					student's goals.
+					Private clarinet, saxophone, woodwind, and musicianship coaching for students who
+					want stronger sound, sharper auditions, and more confidence in the ensemble.
 				</p>
 				<div class="actions">
 					<a class="button" href="/clarinet-lessons/">Explore lessons</a>
@@ -23,32 +23,126 @@ const Content = home ? (await render(home)).Content : undefined;
 				</div>
 			</div>
 			<aside class="hero-panel" aria-label="Studio contact information">
-				<h2>Start here</h2>
+				<p class="kicker">Start Here</p>
+				<h2>Go from good to great.</h2>
 				<ul class="fact-list">
 					<li><span>Phone</span><strong>{site.phone}</strong></li>
-					<li><span>Email</span><strong>{site.email}</strong></li>
 					<li><span>Studio</span><strong>Palm Bay, FL</strong></li>
-					<li><span>Options</span><strong>In studio, in home, online</strong></li>
+					<li><span>Formats</span><strong>Studio, travel, online</strong></li>
+					<li><span>Focus</span><strong>Auditions, tone, confidence</strong></li>
 				</ul>
 			</aside>
 		</div>
 	</section>
 
+	<section class="stat-strip" aria-label="Studio highlights">
+		<div><strong>30+</strong><span>years of teaching and playing experience</span></div>
+		<div><strong>40+</strong><span>weekly private students at full studio capacity</span></div>
+		<div><strong>1997</strong><span>All-State student success tracked since</span></div>
+		<div><strong>4</strong><span>lesson formats for students and schools</span></div>
+	</section>
+
+	<section class="section section-intro">
+		<p class="kicker">Lesson Paths</p>
+		<h2>Focused instruction for every serious woodwind milestone.</h2>
+		<p class="lede">
+			From the first clean register break to college audition preparation, each lesson is built
+			around concrete musical growth and durable practice habits.
+		</p>
+	</section>
+
 	<section class="section">
-		<p class="kicker">Lesson paths</p>
-		<h2>Designed to take students from good to great.</h2>
 		<div class="grid">
-			<article class="card">
-				<h3>Clarinet Lessons</h3>
-				<p>Audition preparation, fundamentals, tone, technique, and confidence for beginners through advanced players.</p>
+			<article class="card photo-card">
+				<img src={images.studioCase.src} alt={images.studioCase.alt} loading="lazy" />
+				<div>
+					<p class="kicker">Private Study</p>
+					<h3>Clarinet Lessons</h3>
+					<p>Audition preparation, fundamentals, tone, technique, and confidence for beginners through advanced players.</p>
+					<a href="/clarinet-lessons/">View lesson details</a>
+				</div>
 			</article>
-			<article class="card">
-				<h3>Saxophone Lessons</h3>
-				<p>Classical and jazz saxophone coaching with the same goal-focused approach used across the studio.</p>
+			<article class="card photo-card">
+				<img src={images.instruments.src} alt={images.instruments.alt} loading="lazy" />
+				<div>
+					<p class="kicker">Woodwind Studio</p>
+					<h3>Saxophone Lessons</h3>
+					<p>Classical and jazz saxophone coaching with the same goal-focused approach used across the studio.</p>
+					<a href="/clarinet-lessons/">Explore options</a>
+				</div>
 			</article>
-			<article class="card">
-				<h3>Band Director Mentoring</h3>
-				<p>Clinics, sectionals, listening support, leadership training, and practical woodwind guidance.</p>
+			<article class="card photo-card">
+				<img src={images.bandListening.src} alt={images.bandListening.alt} loading="lazy" />
+				<div>
+					<p class="kicker">School Support</p>
+					<h3>Band Director Mentoring</h3>
+					<p>Clinics, sectionals, listening support, leadership training, and practical woodwind guidance.</p>
+					<a href="/band-director-listening-list/">See listening support</a>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section class="feature-band">
+		<div class="section split">
+			<div>
+				<p class="kicker">Listening Culture</p>
+				<h2>Students need a model sound before they can build one.</h2>
+				<p class="lede">
+					The studio uses listening to connect tone, phrasing, style, balance, and ensemble
+					awareness to the work students do in the practice room.
+				</p>
+				<div class="actions">
+					<a class="button" href="/meat-the-team/">Clarinet listening list</a>
+					<a class="button secondary" href="/band-director-listening-list/">Band director list</a>
+				</div>
+			</div>
+			<div class="grid listening-grid">
+				<article class="card photo-card listening-card">
+					<img src={images.haroldWright.src} alt={images.haroldWright.alt} loading="lazy" />
+					<div>
+						<h3>Harold Wright</h3>
+						<p>A core orchestral clarinet sound model.</p>
+					</div>
+				</article>
+				<article class="card photo-card listening-card">
+					<img src={images.robertMarcellus.src} alt={images.robertMarcellus.alt} loading="lazy" />
+					<div>
+						<h3>Robert Marcellus</h3>
+						<p>A legendary performer and teacher.</p>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section split">
+		<div>
+			<p class="kicker">Gear Guidance</p>
+			<h2>Reeds, mouthpieces, stands, and setup choices that actually help.</h2>
+			<p class="lede">
+				Families do not need to guess at gear. The studio keeps recommendations practical,
+				level-appropriate, and tied to the student's current playing needs.
+			</p>
+			<div class="actions">
+				<a class="button" href="/childrens-music-school/">Best gear</a>
+				<a class="button secondary" href="/blog/">Read gear notes</a>
+			</div>
+		</div>
+		<div class="grid">
+			<article class="card photo-card">
+				<img src={images.vandorenReeds.src} alt={images.vandorenReeds.alt} loading="lazy" />
+				<div>
+					<h3>Reeds</h3>
+					<p>Reliable choices for clarinet and saxophone students.</p>
+				</div>
+			</article>
+			<article class="card photo-card">
+				<img src={images.clarinetStand.src} alt={images.clarinetStand.alt} loading="lazy" />
+				<div>
+					<h3>Accessories</h3>
+					<p>Simple tools that support consistent practice.</p>
+				</div>
 			</article>
 		</div>
 	</section>
