@@ -899,6 +899,10 @@ const footerLinks = [
 		padding-inline: max(1.25rem, calc((100vw - var(--max)) / 2));
 	}
 
+	.site-footer > * {
+		min-width: 0;
+	}
+
 	.footer-nav {
 		display: grid;
 		align-content: start;
@@ -915,6 +919,7 @@ const footerLinks = [
 		align-items: center;
 		gap: 0.55rem;
 		color: #ffe0ae;
+		overflow-wrap: anywhere;
 	}
 
 	.site-footer .footer-button {
@@ -953,6 +958,11 @@ const footerLinks = [
 		.site-footer,
 		.hero-inner {
 			display: grid;
+		}
+
+		.site-footer {
+			grid-template-columns: 1fr;
+			padding-inline: 1.25rem;
 		}
 
 		nav {
