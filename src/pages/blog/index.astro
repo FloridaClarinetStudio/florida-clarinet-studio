@@ -1,42 +1,42 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { blogImages, images } from '../../lib/site';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
-
-const postsWithImages = posts.map((post) => {
-	const slug = post.id.replace(/\.(md|mdx)$/, '');
-	return {
-		post,
-		slug,
-		image: blogImages[slug as keyof typeof blogImages] ?? images.studioCase,
-	};
-});
+const blogFiles = import.meta.glob('../../content/blog/**/*.{md,mdx}');
+const posts =
+	Object.keys(blogFiles).length > 0
+		? (await getCollection('blog', ({ data }) => !data.draft)).sort(
+				(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+			)
+		: [];
 ---
 
-<BaseLayout title="Blog" description="Advice, gear notes, listening recommendations, and studio updates." image={images.instruments}>
-	<section class="content-page">
+<BaseLayout title="Blog" description="Articles from Robin Ryon about music study, practice, auditions, and student growth.">
+	<section class="content-page blog-page">
 		<header>
-			<p class="kicker">Studio Notes</p>
-			<h1>Blog</h1>
-			<p class="lede">Advice, recommendations, and updates from Florida Clarinet Studio.</p>
+			<p class="kicker">Blog</p>
+			<h1>Music Notes from Robin Ryon</h1>
+			<p class="lede">Articles about clarinet, saxophone, auditions, practice, and music study.</p>
 		</header>
-		<ul class="post-list">
-			{
-				postsWithImages.map(({ post, slug, image }) => (
-					<li class="card photo-card">
-						<img src={image.src} alt={image.alt} loading="lazy" />
-						<div>
-							<h2><a href={`/blog/${slug}/`}>{post.data.title}</a></h2>
-							<p>{post.data.description}</p>
-							<small>{post.data.pubDate.toLocaleDateString('en-US')}</small>
-						</div>
-					</li>
-				))
-			}
-		</ul>
+		{
+			posts.length > 0 ? (
+				<ul class="post-list">
+					{
+						posts.map((post) => {
+							const slug = post.id.replace(/\.(md|mdx)$/, '');
+							return (
+								<li class="card">
+									<h2><a href={`/blog/${slug}/`}>{post.data.title}</a></h2>
+									{post.data.description && <p>{post.data.description}</p>}
+									<a class="text-link" href={`/blog/${slug}/`}>Read article</a>
+								</li>
+							);
+						})
+					}
+				</ul>
+			) : (
+				<p class="empty-state">Robin's articles will appear here once the blog is ready.</p>
+			)
+		}
 	</section>
 </BaseLayout>

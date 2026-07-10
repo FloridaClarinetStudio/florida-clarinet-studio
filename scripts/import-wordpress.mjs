@@ -31,10 +31,14 @@ const pageOrder = new Map([
 	['clarinet-lessons', 3],
 	['faq-page', 4],
 	['meat-the-team', 5],
-	['childrens-music-school', 6],
-	['band-director-listening-list', 7],
 	['my-web-site-recommendations', 8],
 	['contact-us', 9],
+]);
+
+const pageFilenames = new Map([
+	['main-home-2', 'home.md'],
+	['meat-the-team', 'listening-list.md'],
+	['my-web-site-recommendations', 'recs.md'],
 ]);
 
 const preferredPageSlugs = new Set(pageOrder.keys());
@@ -70,7 +74,7 @@ let postCount = 0;
 let preservedCount = 0;
 
 await mkdir('src/content/pages', { recursive: true });
-await mkdir('src/content/blog', { recursive: true });
+await mkdir('src/content/gear', { recursive: true });
 
 for (const item of items) {
 	const record = {
@@ -117,7 +121,7 @@ for (const item of items) {
 	const description = summarize(record.excerpt || body);
 
 	if (record.type === 'page') {
-		const filename = record.slug === 'main-home-2' ? 'home.md' : `${record.slug}.md`;
+		const filename = pageFilenames.get(record.slug) ?? `${record.slug}.md`;
 		const target = path.join('src/content/pages', filename);
 		if (!force && (await exists(target))) {
 			preservedCount += 1;
@@ -144,7 +148,7 @@ for (const item of items) {
 	}
 
 	if (record.type === 'post') {
-		const target = path.join('src/content/blog', `${record.slug}.md`);
+		const target = path.join('src/content/gear', `${record.slug}.md`);
 		if (!force && (await exists(target))) {
 			preservedCount += 1;
 			review.push({
@@ -177,7 +181,8 @@ await writeFile(
 	[
 		'# Content Migration Review',
 		'',
-		`Imported ${pageCount} pages and ${postCount} blog posts from \`${exportFile}\`.`,
+		`Imported ${pageCount} pages and ${postCount} gear posts from \`${exportFile}\`.`,
+		'Preferred recommendation posts are imported into `src/content/gear`.',
 		`Preserved ${preservedCount} existing Markdown files. Use \`--force\` to overwrite curated content.`,
 		'',
 		'The importer intentionally skips demo theme pages, WooCommerce utility pages, empty records, and content that matches spam audit terms.',
@@ -192,7 +197,7 @@ await writeFile(
 	].join('\n'),
 );
 
-console.log(`Imported ${pageCount} pages and ${postCount} blog posts. Preserved ${preservedCount} existing files.`);
+console.log(`Imported ${pageCount} pages and ${postCount} gear posts. Preserved ${preservedCount} existing files.`);
 console.log('Wrote content-migration-review.md.');
 
 async function writeContent(target, content) {
@@ -305,8 +310,6 @@ function navigationTitle(slug, title) {
 		'about-us': 'About',
 		'faq-page': 'FAQ',
 		'meat-the-team': 'Listening List',
-		'childrens-music-school': 'Best Gear',
-		'band-director-listening-list': 'Band Director Listening List',
 		'my-web-site-recommendations': 'Website Recommendations',
 		'contact-us': 'Contact',
 	};

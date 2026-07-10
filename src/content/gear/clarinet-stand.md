@@ -5,6 +5,9 @@ pubDate: "2025-11-26"
 updatedDate: "2025-12-11"
 categories:
   - "Gear"
+productName: "K&M 15228 Compact In-Bell Clarinet Stand"
+productUrl: "https://www.amazon.com/K%C3%B6nig-Meyer-15228-000-55-Clarinet-Portable/dp/B01BHJRUVO"
+productImage: "/images/products/clarinet-stand.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/clarinet-stand/"
 ---
 

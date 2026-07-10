@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { gearImages, images } from '../../lib/site';
+
+const posts = (await getCollection('gear', ({ data }) => !data.draft)).sort((a, b) =>
+	a.data.title.localeCompare(b.data.title),
+);
+
+const postsWithImages = posts.map((post) => {
+	const slug = post.id.replace(/\.(md|mdx)$/, '');
+	const productName = post.data.productName ?? post.data.title;
+	return {
+		post,
+		slug,
+		productName,
+		image: post.data.productImage
+			? { src: post.data.productImage, alt: `${productName} product image` }
+			: gearImages[slug as keyof typeof gearImages] ?? images.studioCase,
+	};
+});
+---
+
+<BaseLayout title="Gear" description="Robin Ryon's recommended clarinet, saxophone, and music practice gear.">
+	<section class="content-page blog-page">
+		<header>
+			<p class="kicker">Recommended Gear</p>
+			<h1>Robin's Gear Recommendations</h1>
+			<p class="lede">
+				Clarinet, saxophone, and practice gear Robin recommends to students and families.
+			</p>
+		</header>
+		<ul class="post-list">
+			{
+				postsWithImages.map(({ post, slug, productName, image }) => (
+					<li class="card photo-card recommendation-card">
+						<img src={image.src} alt={image.alt} loading="lazy" />
+						<div>
+							<h2><a href={`/gear/${slug}/`}>{post.data.title}</a></h2>
+							{post.data.productName && <p class="product-name">{productName}</p>}
+							<p>{post.data.description}</p>
+							<div class="actions compact-actions">
+								<a class="button" href={`/gear/${slug}/`}>Why Robin recommends it</a>
+								{
+									post.data.productUrl && (
+										<a class="button secondary" href={post.data.productUrl} rel="nofollow sponsored noopener" target="_blank">
+											Find on Amazon
+										</a>
+									)
+								}
+							</div>
+						</div>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</BaseLayout>

@@ -5,10 +5,10 @@ import { images, site } from '../lib/site';
 
 const page = await getEntry('pages', 'contact-us');
 const Content = page ? (await render(page)).Content : undefined;
-const title = page?.data.title ?? 'Contact Florida Clarinet Studio';
+const title = page?.data.title ?? 'Contact Robin Ryon';
 const description =
 	page?.data.description ??
-	'Contact Florida Clarinet Studio for clarinet, saxophone, woodwind, and musicianship lessons.';
+	'Contact Robin Ryon for clarinet, saxophone, woodwind, and musicianship lessons.';
 ---
 
 <BaseLayout title={title} description={description} image={images.instruments}>
@@ -80,15 +80,15 @@ const description =
 			</form>
 
 			<aside class="contact-details">
-				<h2>Studio Contact</h2>
+				<h2>Contact Robin</h2>
 				<ul>
 					<li><strong>Phone</strong><a href={`tel:${site.phone.replaceAll('-', '')}`}>{site.phone}</a></li>
 					<li><strong>Email</strong><a href={`mailto:${site.email}`}>{site.email}</a></li>
-					<li><strong>Studio</strong><span>{site.address}</span></li>
+					<li><strong>Teaching location</strong><span>{site.address}</span></li>
 					<li><strong>Service areas</strong><span>Palm Bay, Melbourne, Viera, the Space Coast, and online</span></li>
 				</ul>
 
-				<h2>Studio Hours</h2>
+				<h2>Lesson Hours</h2>
 				<ul>
 					<li><strong>Monday-Friday</strong><span>9 AM - 9 PM</span></li>
 					<li><strong>Saturday</strong><span>9 AM - 5 PM</span></li>

@@ -1,6 +1,6 @@
 ---
-title: "Clarinet and Saxophone Lesson FAQ"
-description: "Answers about Florida Clarinet Studio lesson ages, pricing, expectations, instruments, online lessons, practice, and audition preparation."
+title: "FAQ"
+description: "Frequently asked questions about lessons with Robin Ryon, ages, pricing, expectations, instruments, and lesson frequency."
 navTitle: "FAQ"
 order: 4
 sourceUrl: "https://floridaclarinetstudio.com/faq-page/"
@@ -8,17 +8,17 @@ sourceUrl: "https://floridaclarinetstudio.com/faq-page/"
 
 ## What services are offered?
 
-Florida Clarinet Studio offers private, group, ensemble, and online lessons in clarinet, saxophone, conducting, music theory, and composition. The studio also provides professional-level mentoring for band and orchestra directors, band staff, and student leadership.
+Robin offers private, group, ensemble, and online lessons in clarinet, saxophone, conducting, music theory, and composition. He also provides professional-level mentoring for band and orchestra directors, band staff, and student leadership.
 
-## What ages can work with Florida Clarinet Studio?
+## What ages can work with Robin?
 
-Most students begin in 7th grade, though some have started as early as age 9. The studio has worked with students from about age 10 through adult learners, with a primary focus on 7th through 12th grade musicians.
+Most students begin in 7th grade, though some have started as early as age 9. Robin has worked with students from about age 10 through adult learners, with a primary focus on 7th through 12th grade musicians.
 
 ## What pricing plans are offered?
 
-Lessons at the studio are $35 for 30 minutes and $70 for an hour. Lessons at your house are $40 for 30 minutes and $80 for an hour, depending on schedule and availability.
+Lessons with Robin are $35 for 30 minutes and $70 for an hour at his Palm Bay teaching location. Lessons at your house are $40 for 30 minutes and $80 for an hour, depending on schedule and availability.
 
-The studio teaches at 998 Boeing St. NE, Palm Bay, FL 32907 from Friday through Sunday. Travel lessons are typically Monday through Thursday.
+Robin teaches at 998 Boeing St. NE, Palm Bay, FL 32907 from Friday through Sunday. Travel lessons are typically Monday through Thursday.
 
 ## What should I expect in my lesson?
 
@@ -30,7 +30,7 @@ Improvement depends on the student's goals, starting point, consistency, and pra
 
 ## What type of instrument should I rent or buy?
 
-The best choice depends on age, level, budget, and goals. The studio can help families evaluate rental instruments, step-up instruments, reeds, mouthpieces, ligatures, and accessories.
+The best choice depends on age, level, budget, and goals. Robin can help families evaluate rental instruments, step-up instruments, reeds, mouthpieces, ligatures, and accessories.
 
 ## How often should a student take a lesson?
 

@@ -5,6 +5,8 @@ pubDate: "2025-11-25"
 updatedDate: "2025-12-11"
 categories:
   - "Gear"
+productName: "Vandoren Traditional Alto Saxophone Reeds"
+productImage: "/images/products/vandoren-alto-sax-reeds.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/vandoren-alto-saxophone-reeds/"
 ---
 

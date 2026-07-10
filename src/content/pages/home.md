@@ -1,14 +1,14 @@
 ---
-title: "Private Clarinet and Saxophone Lessons on Florida's Space Coast"
-description: "Robin Ryon teaches private clarinet, saxophone, woodwind, and audition-prep lessons for students in Palm Bay, Melbourne, Viera, and online."
+title: "Florida Music Studio"
+description: "Clarinet, saxophone, woodwind, and musicianship lessons tailored to each student's goals."
 navTitle: "Home"
 order: 1
 sourceUrl: "https://floridaclarinetstudio.com/main-home-2/"
 ---
 
-## About Our School
+## About Robin's Teaching
 
-Florida Clarinet Studio serves the Space Coast of Central Florida and beyond with lessons tailored to each student's goals and needs. The studio helps students prepare for All-County, All-State, solo and ensemble, auditions, chair placement, and stronger everyday musicianship.
+Robin Ryon serves the Space Coast of Central Florida and beyond with lessons tailored to each student's goals and needs. He helps students prepare for All-County, All-State, solo and ensemble, auditions, chair placement, and stronger everyday musicianship.
 
 ## Programs
 
@@ -30,14 +30,14 @@ Musicianship support for students who want to understand how music works, not ju
 
 ## Pricing
 
-- **At the home studio:** $35 per 30 minutes or $70 per hour.
+- **At Robin's Palm Bay teaching location:** $35 per 30 minutes or $70 per hour.
 - **At your house:** $40 per 30 minutes or $80 per hour, based on schedule and availability.
 - **School clinics:** available for clarinet, saxophone, woodwind sectionals, full band clinics, and audition preparation.
-- **Online lessons:** Zoom, Discord, or WhatsApp options are available at the in-studio rate.
+- **Online lessons:** Zoom, Discord, or WhatsApp options are available at the Palm Bay lesson rate.
 
 ## What Students and Families Say
 
-> Florida Clarinet Studio guided me from early fundamentals and strong practice habits to the life lessons needed for college and even professional music.
+> Robin guided me from early fundamentals and strong practice habits to the life lessons needed for college and even professional music.
 
 > The time, thoughtfulness and expertise Mr. Ryon demonstrates translates into ability, confidence, and a love for their instruments.
 

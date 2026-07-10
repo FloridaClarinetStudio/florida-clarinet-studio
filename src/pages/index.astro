@@ -12,39 +12,41 @@ const Content = home ? (await render(home)).Content : undefined;
 		<div class="hero-inner">
 			<div>
 				<p class="kicker">Palm Bay, Melbourne, Viera, and online</p>
-				<h1>Clarinet lessons with a higher ceiling.</h1>
+				<h1>Private clarinet and saxophone lessons with a higher ceiling.</h1>
 				<p class="lede">
-					Private clarinet, saxophone, woodwind, and musicianship coaching for students who
-					want stronger sound, sharper auditions, and more confidence in the ensemble.
+					Robin Ryon helps Space Coast students build stronger sound, sharper auditions,
+					and the confidence to thrive in school band, All-County, All-State, solo and
+					ensemble, and beyond.
 				</p>
 				<div class="actions">
-					<a class="button" href="/clarinet-lessons/">Explore lessons</a>
-					<a class="button secondary" href="/contact-us/">Contact the studio</a>
+					<a class="button" href="/contact-us/">{site.primaryCta}</a>
+					<a class="button secondary" href="/contact-us/">Contact Robin</a>
 				</div>
 			</div>
-			<aside class="hero-panel" aria-label="Studio contact information">
-				<p class="kicker">Start Here</p>
-				<h2>Go from good to great.</h2>
+			<aside class="hero-panel" aria-label="Robin Ryon contact information">
+				<img class="hero-portrait" src={images.mrRyon.src} alt={images.mrRyon.alt} loading="eager" />
+				<p class="kicker">Meet Robin Ryon</p>
+				<h2>One teacher, a clear plan, and a lot of care.</h2>
 				<ul class="fact-list">
 					<li><span>Phone</span><strong>{site.phone}</strong></li>
-					<li><span>Studio</span><strong>Palm Bay, FL</strong></li>
-					<li><span>Formats</span><strong>Studio, travel, online</strong></li>
+					<li><span>Location</span><strong>Palm Bay, FL</strong></li>
+					<li><span>Formats</span><strong>Palm Bay, travel, online</strong></li>
 					<li><span>Focus</span><strong>Auditions, tone, confidence</strong></li>
 				</ul>
 			</aside>
 		</div>
 	</section>
 
-	<section class="stat-strip" aria-label="Studio highlights">
+	<section class="stat-strip" aria-label="Robin Ryon teaching highlights">
 		<div><strong>30+</strong><span>years of teaching and playing experience</span></div>
-		<div><strong>40+</strong><span>weekly private students at full studio capacity</span></div>
+		<div><strong>40+</strong><span>weekly private students when Robin's schedule is full</span></div>
 		<div><strong>1997</strong><span>All-State student success tracked since</span></div>
 		<div><strong>4</strong><span>lesson formats for students and schools</span></div>
 	</section>
 
 	<section class="section section-intro">
 		<p class="kicker">Lesson Paths</p>
-		<h2>Focused instruction for every serious woodwind milestone.</h2>
+		<h2>Focused instruction for the milestones that matter.</h2>
 		<p class="lede">
 			From the first clean register break to college audition preparation, each lesson is built
 			around concrete musical growth and durable practice habits.
@@ -59,16 +61,16 @@ const Content = home ? (await render(home)).Content : undefined;
 					<p class="kicker">Private Study</p>
 					<h3>Clarinet Lessons</h3>
 					<p>Audition preparation, fundamentals, tone, technique, and confidence for beginners through advanced players.</p>
-					<a href="/clarinet-lessons/">View lesson details</a>
+					<a href="/clarinet-lessons/">View clarinet lessons</a>
 				</div>
 			</article>
 			<article class="card photo-card">
 				<img src={images.instruments.src} alt={images.instruments.alt} loading="lazy" />
 				<div>
-					<p class="kicker">Woodwind Studio</p>
+					<p class="kicker">Woodwind Lessons</p>
 					<h3>Saxophone Lessons</h3>
-					<p>Classical and jazz saxophone coaching with the same goal-focused approach used across the studio.</p>
-					<a href="/clarinet-lessons/">Explore options</a>
+					<p>Classical and jazz saxophone coaching with Robin's same goal-focused teaching approach.</p>
+					<a href="/saxophone-lessons/">View saxophone lessons</a>
 				</div>
 			</article>
 			<article class="card photo-card">
@@ -77,7 +79,7 @@ const Content = home ? (await render(home)).Content : undefined;
 					<p class="kicker">School Support</p>
 					<h3>Band Director Mentoring</h3>
 					<p>Clinics, sectionals, listening support, leadership training, and practical woodwind guidance.</p>
-					<a href="/band-director-listening-list/">See listening support</a>
+					<a href="/band-directors/">View school support</a>
 				</div>
 			</article>
 		</div>
@@ -86,31 +88,34 @@ const Content = home ? (await render(home)).Content : undefined;
 	<section class="feature-band">
 		<div class="section split">
 			<div>
-				<p class="kicker">Listening Culture</p>
-				<h2>Students need a model sound before they can build one.</h2>
+				<p class="kicker">Why Families Choose Robin</p>
+				<h2>Serious musical growth, taught with patience and purpose.</h2>
 				<p class="lede">
-					The studio uses listening to connect tone, phrasing, style, balance, and ensemble
-					awareness to the work students do in the practice room.
+					Students come for better notes, stronger auditions, and a more reliable sound. They
+					also learn discipline, creative problem solving, and the confidence to lead from
+					their chair.
 				</p>
 				<div class="actions">
-					<a class="button" href="/meat-the-team/">Clarinet listening list</a>
-					<a class="button secondary" href="/band-director-listening-list/">Band director list</a>
+					<a class="button" href="/about-us/">Meet Robin Ryon</a>
+					<a class="button secondary" href="/contact-us/">{site.primaryCta}</a>
 				</div>
 			</div>
-			<div class="grid listening-grid">
-				<article class="card photo-card listening-card">
-					<img src={images.haroldWright.src} alt={images.haroldWright.alt} loading="lazy" />
-					<div>
-						<h3>Harold Wright</h3>
-						<p>A core orchestral clarinet sound model.</p>
-					</div>
+			<div class="proof-grid">
+				<article class="card proof-card">
+					<h3>Audition preparation</h3>
+					<p>All-County, All-State, chair placement, solo and ensemble, and college auditions.</p>
 				</article>
-				<article class="card photo-card listening-card">
-					<img src={images.robertMarcellus.src} alt={images.robertMarcellus.alt} loading="lazy" />
-					<div>
-						<h3>Robert Marcellus</h3>
-						<p>A legendary performer and teacher.</p>
-					</div>
+				<article class="card proof-card">
+					<h3>Whole-person teaching</h3>
+					<p>Lessons connect tone, rhythm, technique, listening, practice habits, and confidence.</p>
+				</article>
+				<article class="card proof-card">
+					<h3>Flexible formats</h3>
+					<p>Robin teaches in Palm Bay, travels when available, works online, and supports school programs.</p>
+				</article>
+				<article class="card proof-card">
+					<h3>Trusted experience</h3>
+					<p>Robin has taught private students full time since 2006.</p>
 				</article>
 			</div>
 		</div>
@@ -118,32 +123,55 @@ const Content = home ? (await render(home)).Content : undefined;
 
 	<section class="section split">
 		<div>
-			<p class="kicker">Gear Guidance</p>
-			<h2>Reeds, mouthpieces, stands, and setup choices that actually help.</h2>
+			<p class="kicker">Pricing</p>
+			<h2>Clear lesson options for students, families, and schools.</h2>
 			<p class="lede">
-				Families do not need to guess at gear. The studio keeps recommendations practical,
-				level-appropriate, and tied to the student's current playing needs.
+				Families should not have to hunt for the basics. Choose the format that fits the
+				student's goals, schedule, and location.
 			</p>
 			<div class="actions">
-				<a class="button" href="/childrens-music-school/">Best gear</a>
-				<a class="button secondary" href="/blog/">Read gear notes</a>
+				<a class="button" href="/contact-us/">{site.primaryCta}</a>
+				<a class="button secondary" href="/clarinet-lessons/">View lesson details</a>
 			</div>
 		</div>
-		<div class="grid">
-			<article class="card photo-card">
-				<img src={images.vandorenReeds.src} alt={images.vandorenReeds.alt} loading="lazy" />
-				<div>
-					<h3>Reeds</h3>
-					<p>Reliable choices for clarinet and saxophone students.</p>
-				</div>
+		<div class="price-grid">
+			<article class="card price-card">
+				<p class="kicker">Palm Bay Lessons</p>
+				<h3>$35 / 30 minutes</h3>
+				<p>$70 per hour for lessons at Robin's Palm Bay teaching location.</p>
 			</article>
-			<article class="card photo-card">
-				<img src={images.clarinetStand.src} alt={images.clarinetStand.alt} loading="lazy" />
-				<div>
-					<h3>Accessories</h3>
-					<p>Simple tools that support consistent practice.</p>
-				</div>
+			<article class="card price-card">
+				<p class="kicker">Travel Lessons</p>
+				<h3>$40 / 30 minutes</h3>
+				<p>$80 per hour at your home, based on schedule and availability.</p>
 			</article>
+			<article class="card price-card">
+				<p class="kicker">Online</p>
+				<h3>Palm Bay rate</h3>
+				<p>Zoom, Discord, or WhatsApp options for students outside Robin's local area.</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="testimonial-band">
+			<p class="kicker">Student and Parent Voices</p>
+			<h2>Families value the blend of expertise, care, and high expectations.</h2>
+			<div class="quote-grid">
+				<blockquote>
+					<p>Robin guided me from early fundamentals and strong practice habits to the life lessons needed for college and professional music.</p>
+				</blockquote>
+				<blockquote>
+					<p>The time, thoughtfulness, and expertise Mr. Ryon demonstrates translates into ability, confidence, and a love for their instruments.</p>
+				</blockquote>
+				<blockquote>
+					<p>Mr. Ryon knows how to prioritize the work needed for high achievement while building confidence and creativity.</p>
+				</blockquote>
+			</div>
+			<div class="actions">
+				<a class="button" href="/contact-us/">{site.primaryCta}</a>
+				<a class="button secondary" href="/about-us/">Learn about Robin</a>
+			</div>
 		</div>
 	</section>
 

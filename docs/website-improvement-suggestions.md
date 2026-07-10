@@ -59,7 +59,7 @@ Use a hero that answers the visitor's core questions within a few seconds:
 
 Recommended messaging direction:
 
-> Florida Clarinet Studio  
+> Florida Music Studio  
 > Private Clarinet & Saxophone Lessons  
 > Helping students throughout Florida earn All-State placements, scholarships, college acceptance, and lifelong confidence through exceptional music instruction.
 

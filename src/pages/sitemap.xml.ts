@@ -28,17 +28,29 @@ export const GET: APIRoute = async () => {
 		'pages',
 		({ id, data }) => !['home', 'contact-us'].includes(id) && !data.draft,
 	);
-	const posts = await getCollection('blog', ({ data }) => !data.draft);
+	const blogFiles = import.meta.glob('../content/blog/**/*.{md,mdx}');
+	const posts =
+		Object.keys(blogFiles).length > 0
+			? await getCollection('blog', ({ data }) => !data.draft)
+			: [];
+	const gear = await getCollection('gear', ({ data }) => !data.draft);
 
 	const urls = [
 		urlEntry('/'),
 		urlEntry('/contact-us/'),
 		urlEntry('/blog/'),
+		urlEntry('/gear/'),
 		...pages.map((page) => urlEntry(`/${page.id.replace(/\.(md|mdx)$/, '')}/`)),
 		...posts.map((post) =>
 			urlEntry(
 				`/blog/${post.id.replace(/\.(md|mdx)$/, '')}/`,
 				post.data.updatedDate ?? post.data.pubDate,
+			),
+		),
+		...gear.map((gearItem) =>
+			urlEntry(
+				`/gear/${gearItem.id.replace(/\.(md|mdx)$/, '')}/`,
+				gearItem.data.updatedDate ?? gearItem.data.pubDate,
 			),
 		),
 	];

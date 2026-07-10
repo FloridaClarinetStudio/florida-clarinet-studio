@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { gearImages, images } from '../../lib/site';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('gear', ({ data }) => !data.draft);
+
+	return posts.map((post) => ({
+		params: { slug: post.id.replace(/\.(md|mdx)$/, '') },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const description = post.data.description;
+const slug = post.id.replace(/\.(md|mdx)$/, '');
+const productName = post.data.productName ?? post.data.title;
+const image = post.data.productImage
+	? { src: post.data.productImage, alt: `${productName} product image` }
+	: gearImages[slug as keyof typeof gearImages] ?? images.studioCase;
+---
+
+<BaseLayout
+	title={post.data.title}
+	description={description}
+	image={image}
+	type="article"
+	publishedTime={post.data.pubDate}
+	modifiedTime={post.data.updatedDate}
+>
+	<section class="page-hero recommendation-hero">
+		<div class="page-hero-content">
+			<div class="recommendation-copy">
+				<p class="kicker">Recommended Gear</p>
+				<h1>{post.data.title}</h1>
+				{
+					post.data.productUrl && (
+						<div class="actions">
+							<a class="button" href={post.data.productUrl} rel="nofollow sponsored noopener" target="_blank">
+								Find on Amazon
+							</a>
+						</div>
+					)
+				}
+			</div>
+			<figure class="recommendation-image">
+				<img src={image.src} alt={image.alt} loading="eager" />
+			</figure>
+		</div>
+	</section>
+	<section class="content-page">
+		<article>
+			<Content />
+		</article>
+	</section>
+</BaseLayout>

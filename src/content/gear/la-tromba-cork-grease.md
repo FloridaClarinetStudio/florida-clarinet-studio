@@ -5,6 +5,9 @@ pubDate: "2025-11-25"
 updatedDate: "2025-12-14"
 categories:
   - "Gear"
+productName: "La Tromba Cork & Slide Grease"
+productImage: "/images/products/la-tromba-cork-grease.png"
+productUrl: "https://www.amazon.com/ReedGeek-Universal-Reed-Tool-Classic/dp/B07NSFBMVW"
 sourceUrl: "https://floridaclarinetstudio.com/la-tromba-cork-grease/"
 ---
 

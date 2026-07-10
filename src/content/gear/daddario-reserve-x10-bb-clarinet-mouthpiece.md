@@ -5,6 +5,9 @@ pubDate: "2025-11-25"
 updatedDate: "2025-12-11"
 categories:
   - "Gear"
+productName: "D'Addario Reserve Bb Clarinet Mouthpiece X10"
+productUrl: "https://www.amazon.com/DAddario-Reserve-Clarinet-Mouthpiece-X10/dp/B008JCVDSY"
+productImage: "/images/products/daddario-reserve-x10.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/daddario-reserve-x10-bb-clarinet-mouthpiece/"
 ---
 

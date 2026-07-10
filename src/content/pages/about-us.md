@@ -1,6 +1,6 @@
 ---
-title: "About Robin Ryon and Florida Clarinet Studio"
-description: "Meet Robin Ryon, a Space Coast clarinet and saxophone teacher helping students build confidence, discipline, expressive musicianship, and audition success."
+title: "About Robin Ryon"
+description: "Meet Robin Ryon, a Space Coast music educator helping clarinet and saxophone students build skill, confidence, discipline, and expressive musicianship."
 navTitle: "About"
 order: 2
 sourceUrl: "https://floridaclarinetstudio.com/about-us/"
@@ -8,22 +8,22 @@ sourceUrl: "https://floridaclarinetstudio.com/about-us/"
 
 ## Build Confidence, Creativity, Discipline, and Self-Expression
 
-Florida Clarinet Studio is a clarinet and saxophone education center dedicated to helping students become exceptional musicians and confident, disciplined people. Located on the Space Coast of Central Florida, the studio combines serious music instruction with life skills that last beyond the practice room and concert stage.
+Robin Ryon teaches clarinet and saxophone students on the Space Coast of Central Florida, helping them become stronger musicians and more confident, disciplined people. His lessons combine serious music instruction with life skills that last beyond the practice room and concert stage.
 
-For more than three decades, the studio has specialized in Bb clarinet, Eb clarinet, bass clarinet, alto saxophone, and tenor saxophone for students of many ages and experience levels. Students prepare for All-County, All-State, college auditions, school band leadership, solo and ensemble, and personal musical growth.
+For more than three decades, Robin has specialized in Bb clarinet, Eb clarinet, bass clarinet, alto saxophone, and tenor saxophone for students of many ages and experience levels. He helps students prepare for All-County, All-State, college auditions, school band leadership, solo and ensemble, and personal musical growth.
 
 ## Meet Mr. Ryon
 
-<figure class="content-image wide">
-  <img src="/images/original/mr-ryon.jpg" alt="Mr. Robin Ryon smiling with two students" loading="lazy" />
-  <figcaption>Mr. Robin Ryon with Florida Clarinet Studio students.</figcaption>
+<figure class="content-image portrait">
+  <img src="/images/original/mr-robin-ryon.png" alt="Robin Ryon smiling with two students" loading="lazy" />
+  <figcaption>Robin Ryon, Clarinet and Saxophone Instructor</figcaption>
 </figure>
 
 Robin Ryon was raised in Baltimore, Maryland, and has lived in Florida since July 2001. In high school and college, he studied with members of the Baltimore Symphony Orchestra clarinet section, including weekly lessons with Christopher Wolfe and Edward Palanker.
 
-Mr. Ryon received his Bachelor of Science in Music Education from Towson University. Since 2006, he has run Florida Clarinet Studio full time, teaching private students each week and working with high school, middle school, college, adult, and school band musicians. Zoom lessons were added to the studio in 2017.
+Mr. Ryon received his Bachelor of Science in Music Education from Towson University. Since 2006, he has taught private students full time, working with high school, middle school, college, adult, and school band musicians. He added Zoom lessons in 2017.
 
-## Studio Focus
+## Robin's Teaching Focus
 
 - Clarinet and saxophone fundamentals
 - Tone, technique, articulation, and musicianship

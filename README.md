@@ -1,4 +1,4 @@
-# Florida Clarinet Studio
+# Florida Music Studio
 
 Astro rebuild and content migration workspace for [floridaclarinetstudio.com](https://floridaclarinetstudio.com/).
 

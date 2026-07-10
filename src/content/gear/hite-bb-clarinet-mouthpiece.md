@@ -5,6 +5,9 @@ pubDate: "2025-11-25"
 updatedDate: "2025-12-14"
 categories:
   - "Gear"
+productName: "J&D Hite Premiere Bb Clarinet Mouthpiece"
+productUrl: "https://www.amazon.com/Hite-H111-Premiere-Clarinet-Mouthpiece/dp/B004P59BGA"
+productImage: "/images/products/hite-bb-clarinet-mouthpiece.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/hite-bb-clarinet-mouthpiece/"
 ---
 

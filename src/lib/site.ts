@@ -1,10 +1,11 @@
 export const site = {
-	name: 'Florida Clarinet Studio',
+	name: 'Florida Music Studio',
 	url: 'https://floridaclarinetstudio.com',
 	tagline: 'Clarinet and saxophone lessons for the Space Coast and beyond.',
 	description:
 		'Tailored clarinet, saxophone, woodwind, and musicianship lessons in Palm Bay, Melbourne, Viera, and online.',
 	defaultImage: '/images/original/instruments.jpg',
+	primaryCta: 'Schedule Your First Lesson',
 	phone: '321-615-7285',
 	email: 'floridaclarinetstudio@gmail.com',
 	address: '998 Boeing St. NE, Palm Bay, FL 32907',
@@ -21,19 +22,23 @@ export const site = {
 
 export const navigation = [
 	{ href: '/', label: 'Home' },
-	{ href: '/about-us/', label: 'About' },
-	{ href: '/clarinet-lessons/', label: 'Lessons' },
-	{ href: '/faq-page/', label: 'FAQ' },
-	{ href: '/meat-the-team/', label: 'Listening List' },
-	{ href: '/childrens-music-school/', label: 'Best Gear' },
-	{ href: '/blog/', label: 'Blog' },
+	{ href: '/about-us/', label: 'About Robin' },
+	{ href: '/clarinet-lessons/', label: 'Clarinet Lessons' },
+	{ href: '/saxophone-lessons/', label: 'Saxophone Lessons' },
+	{ href: '/band-directors/', label: 'Band Directors' },
+	{ href: '/gear/', label: 'Gear' },
 	{ href: '/contact-us/', label: 'Contact' },
+];
+
+export const footerNavigation = [
+	{ href: '/listening-list/', label: 'Listening List' },
+	{ href: '/recs/', label: 'Recommendations' },
 ];
 
 export const images = {
 	instruments: {
 		src: '/images/original/instruments.jpg',
-		alt: 'Clarinets, saxophones, and music books inside the Florida Clarinet Studio lesson room',
+		alt: 'Clarinets, saxophones, and music books used in lessons with Robin Ryon',
 	},
 	studioCase: {
 		src: '/images/original/studio-case.jpg',
@@ -60,23 +65,29 @@ export const images = {
 		alt: 'A folding clarinet stand',
 	},
 	mrRyon: {
-		src: '/images/original/mr-ryon.jpg',
-		alt: 'Mr. Robin Ryon smiling with two students',
+		src: '/images/original/mr-robin-ryon.png',
+		alt: 'Robin Ryon smiling with two students',
 	},
 };
 
 export const pageImages = {
-	'about-us': images.instruments,
-	'band-director-listening-list': images.bandListening,
-	'childrens-music-school': images.vandorenReeds,
+	'about-us': {
+		src: '/images/original/mr-ryon.jpg',
+		alt: 'Robin Ryon smiling with two students',
+	},
+	'band-directors': images.bandListening,
 	'clarinet-lessons': images.studioCase,
 	'contact-us': images.instruments,
 	'faq-page': images.studioCase,
-	'meat-the-team': images.haroldWright,
-	'my-web-site-recommendations': images.instruments,
+	'listening-list': images.haroldWright,
+	'listening-list/harold-wright': images.haroldWright,
+	'listening-list/robert-marcellus': images.robertMarcellus,
+	'listening-list/ignatius-gennusa': images.haroldWright,
+	'recs': images.instruments,
+	'saxophone-lessons': images.instruments,
 };
 
-export const blogImages = {
+export const gearImages = {
 	'al3-alto-saxophone-mouth-piece': images.studioCase,
 	'clarinet-stand': images.clarinetStand,
 	'daddario-reserve-x10-bb-clarinet-mouthpiece': images.studioCase,

@@ -5,8 +5,13 @@ import { site } from '../lib/site';
 
 export const GET: APIRoute = async () => {
 	const pages = await getCollection('pages', ({ data }) => !data.draft);
-	const posts = await getCollection('blog', ({ data }) => !data.draft);
-	const items = await buildMarkdownItems(pages, posts);
+	const blogFiles = import.meta.glob('../content/blog/**/*.{md,mdx}');
+	const posts =
+		Object.keys(blogFiles).length > 0
+			? await getCollection('blog', ({ data }) => !data.draft)
+			: [];
+	const gear = await getCollection('gear', ({ data }) => !data.draft);
+	const items = await buildMarkdownItems(pages, posts, gear);
 
 	const lines = [
 		`# ${site.name}`,
@@ -24,7 +29,7 @@ export const GET: APIRoute = async () => {
 		'',
 		'## Full Markdown Export',
 		'',
-		`- [Complete site content as Markdown](${new URL('/llms-full.txt', site.url).toString()}): AI-readable Markdown export of the current public pages and articles.`,
+		`- [Complete site content as Markdown](${new URL('/llms-full.txt', site.url).toString()}): AI-readable Markdown export of the current public pages, articles, and gear.`,
 		'',
 		'## Pages',
 		'',
@@ -32,10 +37,16 @@ export const GET: APIRoute = async () => {
 			.filter((item) => item.section === 'Pages')
 			.map((item) => `- [${item.title}](${item.url}): ${item.description ?? ''}`),
 		'',
-		'## Articles and Recommendations',
+		'## Articles',
 		'',
 		...items
-			.filter((item) => item.section === 'Articles and Recommendations')
+			.filter((item) => item.section === 'Articles')
+			.map((item) => `- [${item.title}](${item.url}): ${item.description ?? ''}`),
+		'',
+		'## Gear',
+		'',
+		...items
+			.filter((item) => item.section === 'Gear')
 			.map((item) => `- [${item.title}](${item.url}): ${item.description ?? ''}`),
 		'',
 	];

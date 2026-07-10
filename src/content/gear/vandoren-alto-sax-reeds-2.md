@@ -5,6 +5,8 @@ pubDate: "2025-11-24"
 updatedDate: "2025-12-11"
 categories:
   - "Gear"
+productName: "Vandoren Traditional Bb Clarinet Reeds"
+productImage: "/images/products/vandoren-traditional-bb-clarinet-reeds.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/vandoren-alto-sax-reeds-2/"
 ---
 

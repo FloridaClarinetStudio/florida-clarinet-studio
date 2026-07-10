@@ -28,4 +28,21 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { pages, blog };
+const gear = defineCollection({
+	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/gear' }),
+	schema: z.object({
+		title: z.string(),
+		description: z.string().optional(),
+		pubDate: z.coerce.date(),
+		updatedDate: z.coerce.date().optional(),
+		categories: z.array(z.string()).default([]),
+		tags: z.array(z.string()).default([]),
+		productName: z.string().optional(),
+		productUrl: z.string().url().optional(),
+		productImage: z.string().optional(),
+		draft: z.boolean().default(false),
+		sourceUrl: z.string().url().optional(),
+	}),
+});
+
+export const collections = { pages, blog, gear };

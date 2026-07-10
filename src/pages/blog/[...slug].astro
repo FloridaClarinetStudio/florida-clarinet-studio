@@ -1,9 +1,14 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { blogImages, images } from '../../lib/site';
+import { images } from '../../lib/site';
 
 export async function getStaticPaths() {
+	const blogFiles = import.meta.glob('../../content/blog/**/*.{md,mdx}');
+	if (Object.keys(blogFiles).length === 0) {
+		return [];
+	}
+
 	const posts = await getCollection('blog', ({ data }) => !data.draft);
 
 	return posts.map((post) => ({
@@ -15,8 +20,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const description = post.data.description;
-const slug = post.id.replace(/\.(md|mdx)$/, '');
-const image = blogImages[slug as keyof typeof blogImages] ?? images.studioCase;
+const image = images.instruments;
 ---
 
 <BaseLayout
@@ -30,7 +34,7 @@ const image = blogImages[slug as keyof typeof blogImages] ?? images.studioCase;
 	<section class="page-hero">
 		<img src={image.src} alt={image.alt} loading="eager" />
 		<div class="page-hero-content">
-			<p class="kicker">{post.data.pubDate.toLocaleDateString('en-US')}</p>
+			<p class="kicker">Blog</p>
 			<h1>{post.data.title}</h1>
 			{post.data.description && <p class="lede">{post.data.description}</p>}
 		</div>
