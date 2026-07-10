@@ -1,6 +1,6 @@
 ---
 title: "Contact Robin Ryon"
-description: "Contact Robin Ryon for clarinet, saxophone, woodwind, and musicianship lessons in Palm Bay, Melbourne, Viera, and online."
+description: "Contact Robin Ryon for clarinet, saxophone, woodwind, and musicianship lessons in Melbourne, Palm Bay, Viera, and the Space Coast of Central Florida."
 navTitle: "Contact"
 order: 9
 sourceUrl: "https://floridaclarinetstudio.com/contact-us/"

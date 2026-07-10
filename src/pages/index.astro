@@ -1,22 +1,45 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { images, site } from '../lib/site';
 
 const home = await getEntry('pages', 'home');
 const Content = home ? (await render(home)).Content : undefined;
+const socialProof = [
+	{
+		href: site.social.instagram,
+		icon: 'instagram',
+		label: 'Instagram',
+	},
+	{
+		href: site.social.tiktok,
+		icon: 'tiktok',
+		label: 'TikTok',
+	},
+];
 ---
 
 <BaseLayout title={site.name} description={home?.data.description ?? site.description} image={images.instruments}>
 	<section class="hero">
 		<div class="hero-inner">
 			<div>
-				<p class="kicker">Palm Bay, Melbourne, Viera, and online</p>
+				<p class="kicker">Melbourne, Palm Bay, Viera, and the Space Coast of Central Florida</p>
+				<div class="hero-social-proof" aria-label="Florida Clarinet Studio social follower counts">
+					{
+						socialProof.map((item) => (
+							<a href={item.href} target="_blank" rel="me noopener">
+								<Icon name={item.icon} />
+								<span>{item.label}</span>
+							</a>
+						))
+					}
+				</div>
 				<h1>Private clarinet and saxophone lessons with a higher ceiling.</h1>
 				<p class="lede">
 					Robin Ryon helps Space Coast students build stronger sound, sharper auditions,
-					and the confidence to thrive in school band, All-County, All-State, solo and
-					ensemble, and beyond.
+					and the personal discipline and confidence to thrive in school band,
+					All-County, All-State, solo and ensemble, and beyond.
 				</p>
 				<div class="actions">
 					<a class="button" href="/contact-us/">{site.primaryCta}</a>
@@ -31,24 +54,24 @@ const Content = home ? (await render(home)).Content : undefined;
 					<li><span>Phone</span><strong>{site.phone}</strong></li>
 					<li><span>Location</span><strong>Palm Bay, FL</strong></li>
 					<li><span>Formats</span><strong>Palm Bay, travel, online</strong></li>
-					<li><span>Focus</span><strong>Auditions, tone, confidence</strong></li>
+					<li><span>Focus</span><strong>Auditions, tone, discipline</strong></li>
 				</ul>
 			</aside>
 		</div>
 	</section>
 
 	<section class="stat-strip" aria-label="Robin Ryon teaching highlights">
-		<div><strong>30+</strong><span>years of teaching and playing experience</span></div>
-		<div><strong>40+</strong><span>weekly private students when Robin's schedule is full</span></div>
-		<div><strong>1997</strong><span>All-State student success tracked since</span></div>
-		<div><strong>4</strong><span>lesson formats for students and schools</span></div>
+		<div><strong>Almost 40</strong><span>years of teaching and playing experience</span></div>
+		<div><strong>Over $350k</strong><span>in scholarship monies awarded to his students</span></div>
+		<div><strong>Over 225</strong><span>All-State students taught since 1997</span></div>
+		<div><strong>Multiple</strong><span>lesson formats including private, group, classroom, clinic, and online instruction</span></div>
 	</section>
 
 	<section class="section section-intro">
 		<p class="kicker">Lesson Paths</p>
 		<h2>Focused instruction for the milestones that matter.</h2>
 		<p class="lede">
-			From the first clean register break to college audition preparation, each lesson is built
+			From the first notes on the horn to college audition preparation, each lesson is built
 			around concrete musical growth and durable practice habits.
 		</p>
 	</section>
@@ -89,11 +112,11 @@ const Content = home ? (await render(home)).Content : undefined;
 		<div class="section split">
 			<div>
 				<p class="kicker">Why Families Choose Robin</p>
-				<h2>Serious musical growth, taught with patience and purpose.</h2>
+				<h2>Serious musical growth, taught with patience, purpose, and passion.</h2>
 				<p class="lede">
 					Students come for better notes, stronger auditions, and a more reliable sound. They
-					also learn discipline, creative problem solving, and the confidence to lead from
-					their chair.
+					also learn personal discipline, creative problem solving, and the confidence
+					to lead from their chair.
 				</p>
 				<div class="actions">
 					<a class="button" href="/about-us/">Meet Robin Ryon</a>
@@ -107,7 +130,7 @@ const Content = home ? (await render(home)).Content : undefined;
 				</article>
 				<article class="card proof-card">
 					<h3>Whole-person teaching</h3>
-					<p>Lessons connect tone, rhythm, technique, listening, practice habits, and confidence.</p>
+					<p>Lessons connect tone, rhythm, technique, listening, practice habits, personal discipline, and confidence.</p>
 				</article>
 				<article class="card proof-card">
 					<h3>Flexible formats</h3>
@@ -157,16 +180,27 @@ const Content = home ? (await render(home)).Content : undefined;
 		<div class="testimonial-band">
 			<p class="kicker">Student and Parent Voices</p>
 			<h2>Families value the blend of expertise, care, and high expectations.</h2>
-			<div class="quote-grid">
-				<blockquote>
-					<p>Robin guided me from early fundamentals and strong practice habits to the life lessons needed for college and professional music.</p>
-				</blockquote>
-				<blockquote>
-					<p>The time, thoughtfulness, and expertise Mr. Ryon demonstrates translates into ability, confidence, and a love for their instruments.</p>
-				</blockquote>
-				<blockquote>
-					<p>Mr. Ryon knows how to prioritize the work needed for high achievement while building confidence and creativity.</p>
-				</blockquote>
+			<div class="quote-scroller" aria-label="Scrolling student and parent reviews">
+				<div class="quote-track">
+					<blockquote>
+						<p>Robin guided me from early fundamentals and strong practice habits to the life lessons needed for college and professional music.</p>
+					</blockquote>
+					<blockquote>
+						<p>The time, thoughtfulness, and expertise Mr. Ryon demonstrates translates into ability, confidence, and a love for their instruments.</p>
+					</blockquote>
+					<blockquote>
+						<p>Mr. Ryon knows how to prioritize the work needed for high achievement while building confidence and creativity.</p>
+					</blockquote>
+					<blockquote aria-hidden="true">
+						<p>Robin guided me from early fundamentals and strong practice habits to the life lessons needed for college and professional music.</p>
+					</blockquote>
+					<blockquote aria-hidden="true">
+						<p>The time, thoughtfulness, and expertise Mr. Ryon demonstrates translates into ability, confidence, and a love for their instruments.</p>
+					</blockquote>
+					<blockquote aria-hidden="true">
+						<p>Mr. Ryon knows how to prioritize the work needed for high achievement while building confidence and creativity.</p>
+					</blockquote>
+				</div>
 			</div>
 			<div class="actions">
 				<a class="button" href="/contact-us/">{site.primaryCta}</a>

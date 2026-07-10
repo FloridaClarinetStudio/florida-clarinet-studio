@@ -321,6 +321,45 @@ const footerLinks = [
 		letter-spacing: 0.08em;
 	}
 
+	.hero-social-proof {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+		margin: -0.15rem 0 1.15rem;
+	}
+
+	.hero-social-proof a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		min-height: 2.35rem;
+		padding: 0.45rem 0.7rem;
+		border: 1px solid rgba(255, 224, 174, 0.28);
+		border-radius: 8px;
+		background: rgba(255, 250, 240, 0.12);
+		color: #fff8ec;
+		text-decoration: none;
+		backdrop-filter: blur(10px);
+	}
+
+	.hero-social-proof a:hover {
+		background: rgba(255, 250, 240, 0.18);
+	}
+
+	.hero-social-proof [data-icon] {
+		width: 1.05rem;
+		height: 1.05rem;
+		flex: 0 0 auto;
+		color: #ffe0ae;
+	}
+
+	.hero-social-proof span {
+		color: #fff8ec;
+		font-size: 0.9rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
 	h1,
 	h2,
 	h3 {
@@ -468,8 +507,7 @@ const footerLinks = [
 	}
 
 	.proof-grid,
-	.price-grid,
-	.quote-grid {
+	.price-grid {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 1rem;
@@ -495,6 +533,57 @@ const footerLinks = [
 		background: #fff;
 		padding: clamp(1.25rem, 4vw, 2rem);
 		box-shadow: 0 18px 50px rgba(52, 37, 24, 0.08);
+		overflow: hidden;
+	}
+
+	.quote-scroller {
+		position: relative;
+		margin-block: 1.4rem;
+		overflow: hidden;
+	}
+
+	.quote-scroller::before,
+	.quote-scroller::after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		width: min(12vw, 5rem);
+		pointer-events: none;
+	}
+
+	.quote-scroller::before {
+		left: 0;
+		background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+	}
+
+	.quote-scroller::after {
+		right: 0;
+		background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+	}
+
+	.quote-track {
+		display: flex;
+		width: max-content;
+		gap: 1rem;
+		animation: testimonial-scroll 34s linear infinite;
+	}
+
+	.quote-scroller:hover .quote-track,
+	.quote-scroller:focus-within .quote-track {
+		animation-play-state: paused;
+	}
+
+	.quote-track blockquote {
+		flex: 0 0 clamp(260px, 34vw, 430px);
+		min-height: 11rem;
+		border: 1px solid var(--line);
+		border-left: 4px solid var(--gold);
+		border-radius: 8px;
+		padding: 1.15rem;
+		background: #fffaf1;
+		box-shadow: none;
 	}
 
 	blockquote {
@@ -502,6 +591,12 @@ const footerLinks = [
 		border-left: 4px solid var(--gold);
 		padding: 0.25rem 0 0.25rem 1rem;
 		color: var(--muted);
+	}
+
+	@keyframes testimonial-scroll {
+		to {
+			transform: translateX(calc(-50% - 0.5rem));
+		}
 	}
 
 	.listening-card {
@@ -978,11 +1073,14 @@ const footerLinks = [
 		.grid,
 		.post-list,
 		.proof-grid,
-		.quote-grid,
 		.stat-strip,
 		.split,
 		.contact-layout {
 			grid-template-columns: 1fr;
+		}
+
+		.quote-track {
+			animation-duration: 28s;
 		}
 
 		.image-stack {
@@ -991,6 +1089,26 @@ const footerLinks = [
 
 		.image-stack img:last-child {
 			transform: none;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.quote-scroller {
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+		}
+
+		.quote-scroller::before,
+		.quote-scroller::after {
+			display: none;
+		}
+
+		.quote-track {
+			animation: none;
+		}
+
+		.quote-track blockquote {
+			scroll-snap-align: start;
 		}
 	}
 </style>

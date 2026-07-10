@@ -12,7 +12,7 @@ tags:
   - "tenor saxophone"
   - "tool"
 productName: "ReedGeek Universal Classic Reed Tool"
-productUrl: "https://www.amazon.com/ReedGeek-Universal-Reed-Tool-Classic/dp/B07NSFBMVW"
+productUrl: "https://www.amazon.com/ReedGeek-Universal-Reed-Tool-Classic/dp/B07NSFBMVW?tag=floridaclar00-20"
 productImage: "/images/products/reedgeek-universal-classic.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/the-amazing-reed-geek/"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Florida Music Studio"
+title: "Florida Clarinet Studio"
 description: "Clarinet, saxophone, woodwind, and musicianship lessons tailored to each student's goals."
 navTitle: "Home"
 order: 1
@@ -8,7 +8,7 @@ sourceUrl: "https://floridaclarinetstudio.com/main-home-2/"
 
 ## About Robin's Teaching
 
-Robin Ryon serves the Space Coast of Central Florida and beyond with lessons tailored to each student's goals and needs. He helps students prepare for All-County, All-State, solo and ensemble, auditions, chair placement, and stronger everyday musicianship.
+Robin Ryon serves Melbourne, Palm Bay, Viera, and the Space Coast of Central Florida with lessons tailored to each student's goals and needs. He helps students prepare for All-County, All-State, solo and ensemble, auditions, chair placement, and stronger everyday musicianship.
 
 ## Programs
 

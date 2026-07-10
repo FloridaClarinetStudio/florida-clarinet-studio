@@ -15,6 +15,9 @@ Students improve faster when they listen to excellent players. A strong listenin
 - [Harold Wright](/listening-list/harold-wright/) - principal clarinetist of the Boston Symphony Orchestra from 1970 to 1993, and an essential model for orchestral clarinet tone and phrasing.
 - [Robert Marcellus](/listening-list/robert-marcellus/) - principal clarinetist of the Cleveland Orchestra from 1953 to 1973, and one of the most important American clarinet teachers and performers.
 - [Ignatius Gennusa](/listening-list/ignatius-gennusa/) - a lyrical American orchestral clarinetist whose recordings are useful models for line, color, and chamber-music sensitivity.
+- [CLARINETISTS on Spotify](https://open.spotify.com/playlist/4gpGC4yxNRVkoW06zd92Wp) - a Spotify playlist for exploring more clarinet performers and recordings.
+
+<iframe title="CLARINETISTS Spotify playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4gpGC4yxNRVkoW06zd92Wp?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ## How to Use This List
 

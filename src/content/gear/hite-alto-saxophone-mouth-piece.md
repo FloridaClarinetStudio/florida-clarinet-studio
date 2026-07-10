@@ -6,7 +6,7 @@ updatedDate: "2026-01-13"
 categories:
   - "Gear"
 productName: "Hite Premier Alto Saxophone Mouthpiece"
-productUrl: "https://www.amazon.com/Hite-H117-Premiere-Saxophone-Mouthpiece/dp/B0002F4YUK"
+productUrl: "https://www.amazon.com/Hite-H117-Premiere-Saxophone-Mouthpiece/dp/B0002F4YUK?tag=floridaclar00-20"
 productImage: "/images/products/hite-alto-sax-mouthpiece.png"
 sourceUrl: "https://floridaclarinetstudio.com/hite-alto-saxophone-mouth-piece/"
 ---

@@ -1,16 +1,16 @@
 export const site = {
-	name: 'Florida Music Studio',
+	name: 'Florida Clarinet Studio',
 	url: 'https://floridaclarinetstudio.com',
 	tagline: 'Clarinet and saxophone lessons for the Space Coast and beyond.',
 	description:
-		'Tailored clarinet, saxophone, woodwind, and musicianship lessons in Palm Bay, Melbourne, Viera, and online.',
+		'Tailored clarinet, saxophone, woodwind, and musicianship lessons in Melbourne, Palm Bay, Viera, and the Space Coast of Central Florida.',
 	logo: '/images/florida-clarinet-studio-logo.png',
 	defaultImage: '/images/original/instruments.jpg',
 	primaryCta: 'Schedule Your First Lesson',
 	phone: '321-615-7285',
 	email: 'floridaclarinetstudio@gmail.com',
 	address: '998 Boeing St. NE, Palm Bay, FL 32907',
-	areas: ['Palm Bay', 'Melbourne', 'Viera', 'Space Coast', 'Online'],
+	areas: ['Melbourne', 'Palm Bay', 'Viera', 'Space Coast of Central Florida'],
 	social: {
 		facebook: 'https://www.facebook.com/profile.php?id=61554867575698',
 		instagram: 'https://www.instagram.com/floridaclarinetstudio',
@@ -26,8 +26,8 @@ export const navigation = [
 	{ href: '/about-us/', label: 'About Robin' },
 	{ href: '/clarinet-lessons/', label: 'Clarinet Lessons' },
 	{ href: '/saxophone-lessons/', label: 'Saxophone Lessons' },
-	{ href: '/band-directors/', label: 'Band Directors' },
 	{ href: '/gear/', label: 'Gear' },
+	{ href: '/band-directors/', label: 'Band Directors' },
 	{ href: '/contact-us/', label: 'Contact' },
 ];
 
