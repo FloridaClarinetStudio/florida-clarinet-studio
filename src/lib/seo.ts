@@ -52,7 +52,7 @@ export function buildJsonLd({
 		name: site.name,
 		legalName: site.name,
 		url: site.url,
-		logo: absoluteUrl('/favicon-logo-source.png'),
+		logo: absoluteUrl(site.logo),
 		image: absoluteUrl(site.defaultImage),
 		description: site.description,
 		sameAs: [

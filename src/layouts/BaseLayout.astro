@@ -65,9 +65,9 @@ const footerLinks = [
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/favicon.ico" />
-		<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href={site.logo} />
+		<link rel="icon" type="image/png" sizes="192x192" href={site.logo} />
+		<link rel="apple-touch-icon" href={site.logo} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
@@ -99,8 +99,11 @@ const footerLinks = [
 	<body>
 		<header class="site-header">
 			<a class="brand" href="/" aria-label={`${site.name} home`}>
-				<span>{site.name}</span>
-				<small>{site.tagline}</small>
+				<img src={site.logo} alt="" width="44" height="44" />
+				<span>
+					<strong>{site.name}</strong>
+					<small>{site.tagline}</small>
+				</span>
 			</a>
 			<nav aria-label="Primary navigation">
 				{
@@ -229,13 +232,26 @@ const footerLinks = [
 	}
 
 	.brand {
-		display: grid;
-		gap: 0.05rem;
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
 		color: var(--ink);
 		text-decoration: none;
 	}
 
+	.brand img {
+		width: 44px;
+		height: 44px;
+		object-fit: contain;
+		flex: 0 0 auto;
+	}
+
 	.brand span {
+		display: grid;
+		gap: 0.05rem;
+	}
+
+	.brand strong {
 		font-weight: 800;
 		font-size: 1rem;
 	}

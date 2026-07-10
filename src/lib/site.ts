@@ -4,6 +4,7 @@ export const site = {
 	tagline: 'Clarinet and saxophone lessons for the Space Coast and beyond.',
 	description:
 		'Tailored clarinet, saxophone, woodwind, and musicianship lessons in Palm Bay, Melbourne, Viera, and online.',
+	logo: '/images/florida-clarinet-studio-logo.png',
 	defaultImage: '/images/original/instruments.jpg',
 	primaryCta: 'Schedule Your First Lesson',
 	phone: '321-615-7285',
