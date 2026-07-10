@@ -1,6 +1,6 @@
 ---
-title: "Band Director Listening List"
-description: "Listening support for band directors, woodwind sections, and student leaders."
+title: "Band Director Listening List for Better Ensemble Sound"
+description: "Curated listening support for band directors, woodwind sections, and student leaders working on tone, blend, balance, articulation, and musical style."
 navTitle: "Band Director Listening List"
 order: 7
 sourceUrl: "https://floridaclarinetstudio.com/band-director-listening-list/"

@@ -1,6 +1,6 @@
 ---
-title: "Website Recommendations"
-description: "Helpful online resources for ear training, intonation, listening, and music study."
+title: "Helpful Music Study Websites for Students"
+description: "Online resources for ear training, intonation, listening, practice support, and music study between clarinet and saxophone lessons."
 navTitle: "Website Recommendations"
 order: 8
 sourceUrl: "https://floridaclarinetstudio.com/my-web-site-recommendations/"

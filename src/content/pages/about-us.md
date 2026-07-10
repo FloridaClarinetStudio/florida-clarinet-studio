@@ -1,6 +1,6 @@
 ---
-title: "About Florida Clarinet Studio"
-description: "A Space Coast music studio focused on clarinet, saxophone, discipline, creativity, confidence, and whole-person growth."
+title: "About Robin Ryon and Florida Clarinet Studio"
+description: "Meet Robin Ryon, a Space Coast clarinet and saxophone teacher helping students build confidence, discipline, expressive musicianship, and audition success."
 navTitle: "About"
 order: 2
 sourceUrl: "https://floridaclarinetstudio.com/about-us/"

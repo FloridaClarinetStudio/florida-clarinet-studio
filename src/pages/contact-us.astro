@@ -5,14 +5,13 @@ import { images, site } from '../lib/site';
 
 const page = await getEntry('pages', 'contact-us');
 const Content = page ? (await render(page)).Content : undefined;
-const title = page?.data.seo?.title ?? page?.data.title ?? 'Contact Florida Clarinet Studio';
+const title = page?.data.title ?? 'Contact Florida Clarinet Studio';
 const description =
-	page?.data.seo?.description ??
 	page?.data.description ??
 	'Contact Florida Clarinet Studio for clarinet, saxophone, woodwind, and musicianship lessons.';
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={images.instruments}>
 	<section class="page-hero">
 		<img src={images.instruments.src} alt={images.instruments.alt} loading="eager" />
 		<div class="page-hero-content">

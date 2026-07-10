@@ -14,12 +14,19 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-const description = post.data.seo?.description ?? post.data.description;
+const description = post.data.description;
 const slug = post.id.replace(/\.(md|mdx)$/, '');
 const image = blogImages[slug as keyof typeof blogImages] ?? images.studioCase;
 ---
 
-<BaseLayout title={post.data.seo?.title ?? post.data.title} description={description}>
+<BaseLayout
+	title={post.data.title}
+	description={description}
+	image={image}
+	type="article"
+	publishedTime={post.data.pubDate}
+	modifiedTime={post.data.updatedDate}
+>
 	<section class="page-hero">
 		<img src={image.src} alt={image.alt} loading="eager" />
 		<div class="page-hero-content">

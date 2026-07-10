@@ -1,6 +1,6 @@
 ---
-title: "Clarinet Lessons"
-description: "Private clarinet lessons for students preparing for auditions, school band success, All-County, All-State, solo and ensemble, and stronger musicianship."
+title: "Private Clarinet Lessons in Palm Bay and Melbourne, FL"
+description: "Private clarinet lessons for Space Coast students preparing for All-County, All-State, auditions, solo and ensemble, school band, and stronger tone."
 navTitle: "Clarinet Lessons"
 order: 3
 sourceUrl: "https://floridaclarinetstudio.com/clarinet-lessons/"

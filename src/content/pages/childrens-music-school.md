@@ -1,6 +1,6 @@
 ---
-title: "Best Gear for Clarinet and Saxophone"
-description: "Recommended reeds, mouthpieces, stands, cork grease, ligatures, and accessories for clarinet and saxophone students."
+title: "Best Clarinet and Saxophone Gear for Students"
+description: "Robin Ryon's recommended reeds, mouthpieces, stands, cork grease, ligatures, and accessories for clarinet and saxophone students."
 navTitle: "Best Gear"
 order: 6
 sourceUrl: "https://floridaclarinetstudio.com/childrens-music-school/"

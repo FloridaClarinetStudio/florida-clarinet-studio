@@ -7,7 +7,7 @@ const home = await getEntry('pages', 'home');
 const Content = home ? (await render(home)).Content : undefined;
 ---
 
-<BaseLayout title={site.name} description={home?.data.description ?? site.description}>
+<BaseLayout title={site.name} description={home?.data.description ?? site.description} image={images.instruments}>
 	<section class="hero">
 		<div class="hero-inner">
 			<div>

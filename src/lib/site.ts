@@ -1,8 +1,10 @@
 export const site = {
 	name: 'Florida Clarinet Studio',
+	url: 'https://floridaclarinetstudio.com',
 	tagline: 'Clarinet and saxophone lessons for the Space Coast and beyond.',
 	description:
 		'Tailored clarinet, saxophone, woodwind, and musicianship lessons in Palm Bay, Melbourne, Viera, and online.',
+	defaultImage: '/images/original/instruments.jpg',
 	phone: '321-615-7285',
 	email: 'floridaclarinetstudio@gmail.com',
 	address: '998 Boeing St. NE, Palm Bay, FL 32907',

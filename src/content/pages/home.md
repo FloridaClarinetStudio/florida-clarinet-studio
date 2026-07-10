@@ -1,6 +1,6 @@
 ---
-title: "Florida Clarinet Studio"
-description: "Clarinet, saxophone, woodwind, and musicianship lessons tailored to each student's goals."
+title: "Private Clarinet and Saxophone Lessons on Florida's Space Coast"
+description: "Robin Ryon teaches private clarinet, saxophone, woodwind, and audition-prep lessons for students in Palm Bay, Melbourne, Viera, and online."
 navTitle: "Home"
 order: 1
 sourceUrl: "https://floridaclarinetstudio.com/main-home-2/"

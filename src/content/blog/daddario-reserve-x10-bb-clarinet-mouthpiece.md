@@ -1,6 +1,6 @@
 ---
-title: "D'Addario Reserve x10"
-description: "D'Addario Reserve Bb Clarinet Mouthpiece, X10 Simply the best Clarinet mouthpiece for the price! This is your next great step up from the Hite!"
+title: "D'Addario Reserve X10 Bb Clarinet Mouthpiece Recommendation"
+description: "Why Robin Ryon recommends the D'Addario Reserve X10 Bb clarinet mouthpiece as a strong step-up option for developing clarinet students."
 pubDate: "2025-11-25"
 updatedDate: "2025-12-11"
 categories:

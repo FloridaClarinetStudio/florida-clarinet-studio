@@ -1,6 +1,6 @@
 ---
-title: "The Best Clarinet Listening List"
-description: "Recommended clarinet artists and recordings for students developing a model sound."
+title: "Best Clarinet Listening List for Student Musicians"
+description: "Recommended clarinet artists and recordings to help students develop model tone, phrasing, style, articulation, and musical direction."
 navTitle: "Listening List"
 order: 5
 sourceUrl: "https://floridaclarinetstudio.com/meat-the-team/"

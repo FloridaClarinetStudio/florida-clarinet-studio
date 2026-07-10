@@ -1,6 +1,6 @@
 ---
-title: "FAQ"
-description: "Frequently asked questions about Florida Clarinet Studio lessons, ages, pricing, expectations, instruments, and lesson frequency."
+title: "Clarinet and Saxophone Lesson FAQ"
+description: "Answers about Florida Clarinet Studio lesson ages, pricing, expectations, instruments, online lessons, practice, and audition preparation."
 navTitle: "FAQ"
 order: 4
 sourceUrl: "https://floridaclarinetstudio.com/faq-page/"
