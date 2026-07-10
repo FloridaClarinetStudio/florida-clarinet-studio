@@ -9,6 +9,14 @@ export const site = {
 	email: 'floridaclarinetstudio@gmail.com',
 	address: '998 Boeing St. NE, Palm Bay, FL 32907',
 	areas: ['Palm Bay', 'Melbourne', 'Viera', 'Space Coast', 'Online'],
+	social: {
+		facebook: 'https://www.facebook.com/profile.php?id=61554867575698',
+		instagram: 'https://www.instagram.com/floridaclarinetstudio',
+		linkedin: 'https://www.linkedin.com/in/robin-ryon-841151285/',
+		tiktok: 'https://www.tiktok.com/@floridamusicstudio',
+		twitter: 'https://x.com/flclarinetstdio',
+		youtube: 'https://www.youtube.com/@floridaclarinetstudio2338',
+	},
 };
 
 export const navigation = [

@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { navigation, site } from '../lib/site';
 import { absoluteUrl, buildJsonLd, canonicalUrl, fullTitle } from '../lib/seo';
 
@@ -39,6 +40,25 @@ const structuredData = buildJsonLd({
 	modifiedTime,
 	jsonLd,
 });
+
+const footerLinks = [
+	{
+		href: `tel:${site.phone.replaceAll('-', '')}`,
+		label: site.phone,
+		icon: 'phone',
+	},
+	{
+		href: `mailto:${site.email}`,
+		label: site.email,
+		icon: 'mail',
+	},
+	{ href: site.social.facebook, label: 'Facebook', icon: 'facebook', external: true },
+	{ href: site.social.instagram, label: 'Instagram', icon: 'instagram', external: true },
+	{ href: site.social.linkedin, label: 'LinkedIn', icon: 'linkedin', external: true },
+	{ href: site.social.tiktok, label: 'TikTok', icon: 'tiktok', external: true },
+	{ href: site.social.twitter, label: 'X', icon: 'x', external: true },
+	{ href: site.social.youtube, label: 'YouTube', icon: 'youtube', external: true },
+];
 ---
 
 <!doctype html>
@@ -101,9 +121,28 @@ const structuredData = buildJsonLd({
 				<p>{site.tagline}</p>
 			</div>
 			<ul>
-				<li><a href={`tel:${site.phone.replaceAll('-', '')}`}>{site.phone}</a></li>
-				<li><a href={`mailto:${site.email}`}>{site.email}</a></li>
-				<li>{site.address}</li>
+				{
+					footerLinks.map((link) => (
+						<li>
+							<a
+								href={link.href}
+								rel={link.external ? 'me noopener' : undefined}
+								target={link.external ? '_blank' : undefined}
+							>
+								<span class="footer-icon" aria-hidden="true">
+									<Icon name={link.icon} />
+								</span>
+								<span>{link.label}</span>
+							</a>
+						</li>
+					))
+				}
+				<li class="footer-address">
+					<span class="footer-icon" aria-hidden="true">
+						<Icon name="map-pin" />
+					</span>
+					<span>{site.address}</span>
+				</li>
 			</ul>
 		</footer>
 	</body>
@@ -671,7 +710,35 @@ const structuredData = buildJsonLd({
 	}
 
 	.site-footer a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.55rem;
 		color: #ffe0ae;
+	}
+
+	.footer-icon {
+		display: inline-grid;
+		flex: 0 0 auto;
+		place-items: center;
+		width: 1.65rem;
+		height: 1.65rem;
+		border: 1px solid rgba(255, 224, 174, 0.32);
+		border-radius: 999px;
+		background: rgba(255, 250, 240, 0.08);
+		color: #fff8ec;
+		line-height: 1;
+		text-decoration: none;
+	}
+
+	.footer-icon [data-icon] {
+		width: 0.98rem;
+		height: 0.98rem;
+	}
+
+	.footer-address {
+		display: flex;
+		align-items: center;
+		gap: 0.55rem;
 	}
 
 	@media (max-width: 820px) {
