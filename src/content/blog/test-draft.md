@@ -1,6 +1,6 @@
 ---
 title: Test Draft
-pubDate: "{{now}}"
+pubDate: 2026-07-11
 categories: []
 tags: []
 draft: true
