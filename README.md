@@ -17,6 +17,11 @@ Astro rebuild and content migration workspace for [floridaclarinetstudio.com](ht
 | `pnpm preview`          | Preview the production build             |
 | `pnpm import:wordpress` | Import content from the WordPress export |
 
+## Content Editing
+
+Decap CMS is available at `/admin/` and is configured to create blog posts in `src/content/blog`.
+Local CMS testing uses Decap's local backend; production editing commits through the GitHub backend.
+
 Per `AGENTS.md`, use Astro background mode when starting the dev server directly:
 
 ```sh
