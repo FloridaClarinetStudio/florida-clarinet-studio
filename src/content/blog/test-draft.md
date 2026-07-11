@@ -3,7 +3,7 @@ title: Test Draft
 pubDate: 2026-07-11
 categories: []
 tags: []
-draft: true
+draft: false
 ---
 **Test** 1 2 3
 
