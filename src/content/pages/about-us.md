@@ -15,7 +15,7 @@ For more than three decades, Robin has specialized in Bb clarinet, Eb clarinet, 
 ## Meet Mr. Ryon
 
 <figure class="content-image portrait">
-  <img src="/images/original/mr-robin-ryon.png" alt="Robin Ryon smiling with two students" loading="lazy" />
+  <img src="/images/original/mr-robin-ryon.jpg" alt="Robin Ryon, Clarinet and Saxophone Instructor" loading="lazy" />
   <figcaption>Robin Ryon, Clarinet and Saxophone Instructor</figcaption>
 </figure>
 

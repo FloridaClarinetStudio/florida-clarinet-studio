@@ -37,38 +37,38 @@ export const footerNavigation = [
 ];
 
 export const images = {
-	instruments: {
-		src: '/images/original/instruments.jpg',
-		alt: 'Clarinets, saxophones, and music books used in lessons with Robin Ryon',
-	},
-	studioCase: {
-		src: '/images/original/studio-case.jpg',
-		alt: 'A clarinet arranged inside a blue-lined instrument case',
-	},
-	bandListening: {
-		src: '/images/original/band-listening.jpg',
-		alt: 'A concert band performing on stage',
-	},
-	haroldWright: {
-		src: '/images/original/harold-wright.jpg',
-		alt: 'Clarinetist Harold Wright',
-	},
-	robertMarcellus: {
-		src: '/images/original/robert-marcellus.jpg',
-		alt: 'Clarinetist Robert Marcellus',
-	},
-	vandorenReeds: {
-		src: '/images/original/vandoren-clarinet-reeds.jpg',
-		alt: 'Vandoren clarinet reeds',
-	},
-	clarinetStand: {
-		src: '/images/original/clarinet-stand.jpg',
-		alt: 'A folding clarinet stand',
-	},
-	mrRyon: {
-		src: '/images/original/mr-robin-ryon.png',
-		alt: 'Robin Ryon smiling with two students',
-	},
+  instruments: {
+    src: "/images/original/instruments.jpg",
+    alt: "Clarinets, saxophones, and music books used in lessons with Robin Ryon",
+  },
+  studioCase: {
+    src: "/images/original/studio-case.jpg",
+    alt: "A clarinet arranged inside a blue-lined instrument case",
+  },
+  bandListening: {
+    src: "/images/original/band-listening.jpg",
+    alt: "A concert band performing on stage",
+  },
+  haroldWright: {
+    src: "/images/original/harold-wright.jpg",
+    alt: "Clarinetist Harold Wright",
+  },
+  robertMarcellus: {
+    src: "/images/original/robert-marcellus.jpg",
+    alt: "Clarinetist Robert Marcellus",
+  },
+  vandorenReeds: {
+    src: "/images/original/vandoren-clarinet-reeds.jpg",
+    alt: "Vandoren clarinet reeds",
+  },
+  clarinetStand: {
+    src: "/images/original/clarinet-stand.jpg",
+    alt: "A folding clarinet stand",
+  },
+  mrRyon: {
+    src: "/images/original/mr-robin-ryon.jpg",
+    alt: "Robin Ryon smiling with two students",
+  },
 };
 
 export const pageImages = {
