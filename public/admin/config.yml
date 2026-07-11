@@ -45,13 +45,17 @@ collections:
         hint: Short summary used on the blog index and in search/social metadata.
       - label: Publish Date
         name: pubDate
-        widget: date
-        format: YYYY-MM-DD
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
         default: "{{now}}"
       - label: Updated Date
         name: updatedDate
-        widget: date
-        format: YYYY-MM-DD
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        picker_utc: true
         required: false
       - label: Categories
         name: categories

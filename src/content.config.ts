@@ -2,6 +2,14 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
+const cmsDate = z.preprocess((value) => {
+	if (value === '{{now}}' || (typeof value === 'object' && value !== null && 'now' in value)) {
+		return new Date();
+	}
+
+	return value;
+}, z.coerce.date());
+
 const pages = defineCollection({
 	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/pages' }),
 	schema: z.object({
@@ -19,8 +27,8 @@ const blog = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
+		pubDate: cmsDate,
+		updatedDate: cmsDate.optional(),
 		categories: z.array(z.string()).default([]),
 		tags: z.array(z.string()).default([]),
 		draft: z.boolean().default(false),
@@ -33,8 +41,8 @@ const gear = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
+		pubDate: cmsDate,
+		updatedDate: cmsDate.optional(),
 		categories: z.array(z.string()).default([]),
 		tags: z.array(z.string()).default([]),
 		productName: z.string().optional(),
