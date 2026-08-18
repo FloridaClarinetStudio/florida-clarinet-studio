@@ -1,6 +1,6 @@
 ---
 title: The best mouth piece to start clarinet on
-description: the best mouthpiece to buy
+description: the best Clarinet mouthpiece to buy for a beginner
 pubDate: 2026-08-18
 updatedDate: 2026-08-18
 categories: []
