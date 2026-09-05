@@ -6,6 +6,7 @@ updatedDate: "2025-12-11"
 categories:
   - "Gear"
 productName: "Vandoren Traditional Alto Saxophone Reeds"
+productUrl: "https://www.amazon.com/Vandoren-SR213-Traditional-Reeds-Strength/dp/B00T8L27ZI?tag=floridaclar00-20"
 productImage: "/images/products/vandoren-alto-sax-reeds.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/vandoren-alto-saxophone-reeds/"
 ---

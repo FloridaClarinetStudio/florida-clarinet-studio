@@ -6,6 +6,7 @@ updatedDate: "2025-12-11"
 categories:
   - "Gear"
 productName: "Vandoren Traditional Bb Clarinet Reeds"
+productUrl: "https://www.amazon.com/Vandoren-CR103-Clarinet-Traditional-Strength/dp/B0002E1P08?tag=floridaclar00-20"
 productImage: "/images/products/vandoren-traditional-bb-clarinet-reeds.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/vandoren-alto-sax-reeds-2/"
 ---

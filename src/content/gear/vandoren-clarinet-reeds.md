@@ -1,11 +1,12 @@
 ---
-title: "Vandoren Clarinet Reeds"
+title: "Vandoren V12 Bb Clarinet Reeds Recommendation"
 description: "Vandoren V12 clarinet reeds have a thicker heel and longer palette for maximum vibration, deep and rich clarinet tone, powerful attack, and extended durability."
 pubDate: "2025-11-25"
 updatedDate: "2025-12-11"
 categories:
   - "Gear"
 productName: "Vandoren V12 Bb Clarinet Reeds"
+productUrl: "https://www.amazon.com/Vandoren-CR193-Clarinet-Reeds-Strength/dp/B00MO1XHB2?tag=floridaclar00-20"
 productImage: "/images/products/vandoren-v12-bb-clarinet-reeds.jpg"
 sourceUrl: "https://floridaclarinetstudio.com/vandoren-clarinet-reeds/"
 ---

@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { gearImages, images } from '../../lib/site';
+import { withAmazonAffiliateTag } from '../../lib/affiliate';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('gear', ({ data }) => !data.draft);
@@ -38,7 +39,7 @@ const image = post.data.productImage
 				{
 					post.data.productUrl && (
 						<div class="actions">
-							<a class="button" href={post.data.productUrl} rel="nofollow sponsored noopener" target="_blank">
+							<a class="button" href={withAmazonAffiliateTag(post.data.productUrl)} rel="nofollow sponsored noopener" target="_blank">
 								Find on Amazon
 							</a>
 						</div>

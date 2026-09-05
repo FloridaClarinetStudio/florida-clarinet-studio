@@ -42,6 +42,10 @@ const pageFilenames = new Map([
 ]);
 
 const preferredPageSlugs = new Set(pageOrder.keys());
+// Keep the original export slug for selection, but write its current content filename.
+const gearSlugs = new Map([
+	['vandoren-alto-sax-reeds-2', 'vandoren-traditional-clarinet-reeds'],
+]);
 const preferredPostSlugs = new Set([
 	'vandoren-alto-sax-reeds-2',
 	'vandoren-alto-saxophone-reeds',
@@ -148,7 +152,7 @@ for (const item of items) {
 	}
 
 	if (record.type === 'post') {
-		const target = path.join('src/content/gear', `${record.slug}.md`);
+		const target = path.join('src/content/gear', `${gearSlugs.get(record.slug) ?? record.slug}.md`);
 		if (!force && (await exists(target))) {
 			preservedCount += 1;
 			review.push({

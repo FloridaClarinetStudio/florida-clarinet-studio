@@ -97,7 +97,7 @@ export const gearImages = {
 	'la-tromba-cork-grease': images.studioCase,
 	'manhasset-music-stand': images.clarinetStand,
 	'the-amazing-reed-geek': images.vandorenReeds,
-	'vandoren-alto-sax-reeds-2': images.vandorenReeds,
+	'vandoren-traditional-clarinet-reeds': images.vandorenReeds,
 	'vandoren-alto-saxophone-reeds': images.vandorenReeds,
 	'vandoren-clarinet-reeds': images.vandorenReeds,
 };
