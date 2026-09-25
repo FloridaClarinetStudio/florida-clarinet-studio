@@ -20,40 +20,324 @@ const postsWithImages = posts.map((post) => {
 			: gearImages[slug as keyof typeof gearImages] ?? images.studioCase,
 	};
 });
+
+const categoryDefinitions = [
+	{
+		id: 'mouthpieces-ligatures-pads',
+		number: '01',
+		title: 'Mouthpieces, Ligatures & Pads',
+		description:
+			'The core sound-making upgrades to consider first, including trusted mouthpieces, ligatures, and mouthpiece patches.',
+		details: "D’Addario Reserve X10, J&D Hite Premiere, Vandoren AL3, ligatures, and patches",
+		image: '/images/products/daddario-reserve-x10.jpg',
+		alt: "D’Addario Reserve X10 clarinet mouthpiece",
+		matches: (slug: string) => /mouthpiece|mouth-piece|ligature|patch/.test(slug),
+	},
+	{
+		id: 'reeds-reed-management',
+		number: '02',
+		title: 'Reeds & Reed Management',
+		description:
+			'Reliable reeds, adjustment tools, protective cases, and humidity solutions for consistent daily playing.',
+		details: 'Vandoren V12 and Traditional reeds, ReedGeek tools, reed cases, and humidity control',
+		image: '/images/products/vandoren-v12-bb-clarinet-reeds.jpg',
+		alt: 'Box of Vandoren V12 B-flat clarinet reeds',
+		matches: (slug: string) => /reed/.test(slug),
+	},
+	{
+		id: 'stands-posture-support',
+		number: '03',
+		title: 'Stands & Posture Support',
+		description:
+			'Instrument stands, music stands, and playing supports that encourage safe storage and healthy practice habits.',
+		details: 'K&M in-bell stands, Manhasset music stands, and neck straps',
+		image: '/images/products/clarinet-stand.jpg',
+		alt: 'Compact in-bell clarinet stand',
+		matches: (slug: string) => /stand|strap/.test(slug),
+	},
+	{
+		id: 'care-maintenance',
+		number: '04',
+		title: 'Care & Maintenance',
+		description:
+			'Everyday supplies that keep clarinets and saxophones clean, responsive, and out of the repair shop.',
+		details: 'Cork grease, swabs, polishing cloths, and pad cleaning paper',
+		image: '/images/products/la-tromba-cork-grease.jpg',
+		alt: 'La Tromba cork and slide grease',
+		matches: (slug: string) => /grease|swab|cloth|cleaning/.test(slug),
+	},
+	{
+		id: 'books',
+		number: '05',
+		title: 'Books',
+		description:
+			'Method books, scales, and repertoire for lessons—plus a practical paperless practice setup for advanced students.',
+		details: 'Method books, scale sheets, solo repertoire, forScore, Genius Scan, and iPad workflows',
+		image: '/images/products/standard-of-excellence-book-1-bb-clarinet.jpg',
+		alt: 'Standard of Excellence Book 1 for B-flat clarinet',
+		matches: (slug: string) => /book|method|scale|repertoire/.test(slug),
+	},
+	{
+		id: 'accessories-studio-gear',
+		number: '06',
+		title: 'Accessories & Studio Gear',
+		description:
+			'Useful daily tools and studio extras that make focused practice easier and help build studio culture.',
+		details: 'Metronomes, tuners, pencils, studio merchandise, and fun add-ons',
+		image: '/images/original/studio-case.jpg',
+		alt: 'Clarinet and everyday accessories arranged in a blue-lined case',
+		matches: (slug: string) => /metronome|tuner|pencil|studio|swag/.test(slug),
+	},
+	{
+		id: 'band-director-items',
+		number: '07',
+		title: 'Band Director Items',
+		description:
+			'Classroom-ready woodwind resources and practical recommendations selected with band programs in mind.',
+		details: 'Teaching aids, classroom essentials, ensemble tools, and more recommendations coming soon',
+		image: '/images/original/band-director.jpg',
+		alt: 'Band director leading student musicians in rehearsal',
+		matches: (slug: string) => /band-director|classroom|ensemble/.test(slug),
+	},
+];
+
+const categories = categoryDefinitions.map((category) => ({
+	...category,
+	products: postsWithImages.filter(({ slug }) => category.matches(slug)),
+}));
+
+const pageTitle = 'Recommended Clarinet & Saxophone Gear';
+const pageDescription =
+	"Shop Robin Ryon’s recommended clarinet and saxophone mouthpieces, reeds, stands, care supplies, music books, studio gear, and band director resources.";
+const pageImage = { src: '/images/original/instruments.jpg', alt: 'Clarinets, saxophones, and music books used at Florida Clarinet Studio' };
+const categoryListJsonLd = {
+	'@type': 'ItemList',
+	'@id': 'https://floridaclarinetstudio.com/gear/#categories',
+	name: 'Clarinet and saxophone gear categories',
+	itemListElement: categories.map((category, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: category.title,
+		url: `https://floridaclarinetstudio.com/gear/#${category.id}`,
+	})),
+};
 ---
 
-<BaseLayout title="Gear" description="Robin Ryon's recommended clarinet, saxophone, and music practice gear.">
-	<section class="content-page blog-page">
-		<header>
-			<p class="kicker">Recommended Gear</p>
-			<h1>Robin's Gear Recommendations</h1>
+<BaseLayout title={pageTitle} description={pageDescription} image={pageImage} jsonLd={categoryListJsonLd}>
+	<section class="gear-hero">
+		<div class="gear-hero__content">
+			<p class="kicker">Robin’s trusted picks</p>
+			<h1>Better gear for better practice.</h1>
 			<p class="lede">
-				Clarinet, saxophone, and practice gear Robin recommends to students and families.
+				Clear, teacher-tested recommendations for clarinet and saxophone students, families,
+				and band directors—organized so you can find the right tool quickly.
 			</p>
+			<a class="button" href="#gear-categories">Browse gear categories</a>
+		</div>
+	</section>
+
+	<section class="gear-intro" id="gear-categories" aria-labelledby="categories-heading">
+		<div class="gear-intro__heading">
+			<p class="kicker">The gear shelf</p>
+			<h2 id="categories-heading">Start with what you need</h2>
+		</div>
+		<p>
+			Every recommendation is chosen to solve a real practice-room problem. Start with sound,
+			then build a setup that supports consistent playing and simple instrument care.
+		</p>
+	</section>
+
+	<section class="category-grid" aria-label="Gear categories">
+		{
+			categories.map((category) => (
+				<a class="category-card" href={`#${category.id}`}>
+					<div class="category-card__image">
+						<img src={category.image} alt={category.alt} loading="lazy" />
+						<span>{category.number}</span>
+					</div>
+					<div class="category-card__copy">
+						<h3>{category.title}</h3>
+						<p>{category.description}</p>
+						<strong>Explore category <span aria-hidden="true">→</span></strong>
+					</div>
+				</a>
+			))
+		}
+	</section>
+
+	<section class="recommendations" aria-labelledby="recommendations-heading">
+		<header class="recommendations__header">
+			<p class="kicker">Teacher recommended</p>
+			<h2 id="recommendations-heading">Browse every category</h2>
+			<p>Read why Robin recommends each item before choosing what fits your student.</p>
 		</header>
-		<ul class="post-list">
-			{
-				postsWithImages.map(({ post, slug, productName, image }) => (
-					<li class="card photo-card recommendation-card">
-						<img src={image.src} alt={image.alt} loading="lazy" />
+		{
+			categories.map((category) => (
+				<section class="category-section" id={category.id} aria-labelledby={`${category.id}-heading`}>
+					<div class="category-section__heading">
+						<span>{category.number}</span>
 						<div>
-							<h2><a href={`/gear/${slug}/`}>{post.data.title}</a></h2>
-							{post.data.productName && <p class="product-name">{productName}</p>}
-							<p>{post.data.description}</p>
-							<div class="actions compact-actions">
-								<a class="button" href={`/gear/${slug}/`}>Why Robin recommends it</a>
-								{
-									post.data.productUrl && (
-										<a class="button secondary" href={withAmazonAffiliateTag(post.data.productUrl)} rel="nofollow sponsored noopener" target="_blank">
-											Find on Amazon
-										</a>
-									)
-								}
-							</div>
+							<h3 id={`${category.id}-heading`}>{category.title}</h3>
+							<p>{category.details}</p>
 						</div>
-					</li>
-				))
-			}
-		</ul>
+					</div>
+					{category.products.length > 0 ? (
+						<ul class="product-grid">
+							{category.products.map(({ post, slug, productName, image }) => (
+								<li class="product-card">
+									<a class="product-card__image" href={`/gear/${slug}/`}>
+										<img src={image.src} alt={image.alt} loading="lazy" />
+									</a>
+									<div class="product-card__copy">
+										<h4><a href={`/gear/${slug}/`}>{productName}</a></h4>
+										<p>{post.data.description}</p>
+										<div class="product-card__links">
+											<a href={`/gear/${slug}/`}>Why Robin recommends it</a>
+											{post.data.productUrl && (
+												<a href={withAmazonAffiliateTag(post.data.productUrl)} rel="nofollow sponsored noopener" target="_blank">
+													Find on Amazon <span class="sr-only">(opens in a new tab)</span>
+												</a>
+											)}
+										</div>
+									</div>
+								</li>
+							))}
+						</ul>
+					) : (
+						<div class="coming-soon">
+							<p><strong>More recommendations are coming soon.</strong> Robin is assembling the most useful picks for this category.</p>
+							<a href="/contact-us/">Ask Robin for a recommendation →</a>
+						</div>
+					)}
+				</section>
+			))
+		}
 	</section>
 </BaseLayout>
+
+<style>
+	.gear-hero {
+		min-height: 620px;
+		margin-top: -5.6rem;
+		display: grid;
+		align-items: end;
+		color: #fff8ec;
+		background:
+			linear-gradient(90deg, rgba(25, 16, 12, 0.92) 0%, rgba(25, 16, 12, 0.68) 52%, rgba(25, 16, 12, 0.18) 100%),
+			url('/images/original/instruments.jpg') center / cover;
+	}
+
+	.gear-hero__content {
+		width: min(calc(100% - 2.5rem), var(--max));
+		margin: 0 auto;
+		padding: 11rem 0 5rem;
+	}
+
+	.gear-hero h1 { max-width: 11ch; }
+	.gear-hero .kicker, .gear-hero .lede { color: #ffe0ae; }
+	.gear-hero .lede { max-width: 57ch; }
+
+	.gear-intro, .category-grid, .recommendations {
+		width: min(calc(100% - 2.5rem), var(--max));
+		margin-inline: auto;
+	}
+
+	.gear-intro {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: end;
+		padding-block: 5rem 2.5rem;
+	}
+
+	.gear-intro h2, .recommendations h2 { margin-bottom: 0; }
+	.gear-intro > p { color: var(--muted); font-size: 1.08rem; }
+
+	.category-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+		padding-bottom: 5rem;
+	}
+
+	.category-card {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		border: 1px solid var(--line);
+		border-radius: 8px;
+		background: #fff;
+		color: var(--ink);
+		text-decoration: none;
+		overflow: hidden;
+		box-shadow: 0 18px 50px rgba(52, 37, 24, 0.08);
+		transition: transform 180ms ease, box-shadow 180ms ease;
+	}
+
+	.category-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 24px 55px rgba(52, 37, 24, 0.14);
+	}
+
+	.category-card__image { position: relative; }
+	.category-card__image img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+	.category-card__image span {
+		position: absolute;
+		left: 1rem;
+		bottom: -1.1rem;
+		display: grid;
+		place-items: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		border: 3px solid #fff;
+		border-radius: 50%;
+		background: var(--accent);
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: 800;
+	}
+
+	.category-card__copy { display: flex; flex: 1; flex-direction: column; padding: 2rem 1.2rem 1.3rem; }
+	.category-card h3 { font-size: 1.35rem; }
+	.category-card p { flex: 1; color: var(--muted); font-size: 0.95rem; }
+	.category-card strong { color: var(--accent-strong); font-size: 0.9rem; }
+
+	.recommendations { padding-block: 5rem; }
+	.recommendations__header { max-width: 750px; margin-bottom: 3rem; }
+	.recommendations__header > p:last-child { color: var(--muted); font-size: 1.08rem; }
+
+	.category-section { scroll-margin-top: 7rem; padding-block: 2.5rem; border-top: 1px solid var(--line); }
+	.category-section__heading { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; margin-bottom: 1.5rem; }
+	.category-section__heading > span { color: var(--accent); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; }
+	.category-section__heading h3 { margin-bottom: 0.4rem; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+	.category-section__heading p { color: var(--muted); }
+
+	.product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+	.product-card { display: grid; grid-template-columns: 145px 1fr; min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+	.product-card__image { background: #f4f0e8; }
+	.product-card__image img { width: 100%; height: 100%; min-height: 210px; object-fit: cover; }
+	.product-card__copy { padding: 1.15rem; }
+	.product-card h4 { margin: 0 0 0.65rem; font-size: 1.05rem; line-height: 1.25; }
+	.product-card h4 a { color: var(--ink); text-decoration: none; }
+	.product-card p { color: var(--muted); font-size: 0.88rem; }
+	.product-card__links { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.84rem; font-weight: 700; }
+
+	.coming-soon { display: flex; justify-content: space-between; gap: 2rem; align-items: center; padding: 1.25rem; border: 1px dashed var(--line); border-radius: 8px; background: rgba(255, 255, 255, 0.62); }
+	.coming-soon p { margin: 0; color: var(--muted); }
+	.coming-soon a { flex: 0 0 auto; font-weight: 800; }
+
+	.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+	@media (max-width: 900px) {
+		.category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.product-grid { grid-template-columns: 1fr; }
+	}
+
+	@media (max-width: 640px) {
+		.gear-hero { min-height: 560px; }
+		.gear-intro { grid-template-columns: 1fr; gap: 1rem; padding-top: 3.5rem; }
+		.category-grid { grid-template-columns: 1fr; }
+		.product-card { grid-template-columns: 110px 1fr; }
+		.coming-soon { align-items: flex-start; flex-direction: column; gap: 0.5rem; }
+	}
+</style>
