@@ -53,7 +53,7 @@ const categoryDefinitions = [
 		details: 'K&M in-bell stands, Manhasset music stands, and neck straps',
 		image: '/images/products/clarinet-stand.jpg',
 		alt: 'Compact in-bell clarinet stand',
-		matches: (slug: string) => /stand|strap/.test(slug),
+		matches: (slug: string) => /stand|strap|thumb-rest/.test(slug),
 	},
 	{
 		id: 'care-maintenance',
@@ -73,8 +73,8 @@ const categoryDefinitions = [
 		description:
 			'Method books, scales, and repertoire for lessons—plus a practical paperless practice setup for advanced students.',
 		details: 'Method books, scale sheets, solo repertoire, forScore, Genius Scan, and iPad workflows',
-		image: '/images/products/standard-of-excellence-book-1-bb-clarinet.jpg',
-		alt: 'Standard of Excellence Book 1 for B-flat clarinet',
+		image: '/images/products/habits-successful-musician-book-alto-saxophone.jpg',
+		alt: 'Habits of a Successful Musician book cover for alto saxophone',
 		matches: (slug: string) => /book|method|scale|repertoire/.test(slug),
 	},
 	{
@@ -86,7 +86,7 @@ const categoryDefinitions = [
 		details: 'Metronomes, tuners, pencils, studio merchandise, and fun add-ons',
 		image: '/images/original/studio-case.jpg',
 		alt: 'Clarinet and everyday accessories arranged in a blue-lined case',
-		matches: (slug: string) => /metronome|tuner|pencil|studio|swag/.test(slug),
+		matches: (slug: string) => /metronome|tuner|pencil|studio|swag|mug/.test(slug),
 	},
 	{
 		id: 'band-director-items',
@@ -152,7 +152,7 @@ const categoryListJsonLd = {
 			categories.map((category) => (
 				<a class="category-card" href={`#${category.id}`}>
 					<div class="category-card__image">
-						<img src={category.image} alt={category.alt} loading="lazy" />
+						<img src={category.image} alt={category.alt} loading="lazy" class:list={{ 'category-card__book': category.id === 'books' }} />
 						<span>{category.number}</span>
 					</div>
 					<div class="category-card__copy">
@@ -281,6 +281,7 @@ const categoryListJsonLd = {
 
 	.category-card__image { position: relative; }
 	.category-card__image img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+	.category-card__image img.category-card__book { object-fit: contain; padding: 1rem; background: #f4f0e8; }
 	.category-card__image span {
 		position: absolute;
 		left: 1rem;
@@ -315,7 +316,7 @@ const categoryListJsonLd = {
 	.product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
 	.product-card { display: grid; grid-template-columns: 145px 1fr; min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
 	.product-card__image { background: #f4f0e8; }
-	.product-card__image img { width: 100%; height: 100%; min-height: 210px; object-fit: cover; }
+	.product-card__image img { width: 100%; height: 100%; min-height: 210px; object-fit: contain; }
 	.product-card__copy { padding: 1.15rem; }
 	.product-card h4 { margin: 0 0 0.65rem; font-size: 1.05rem; line-height: 1.25; }
 	.product-card h4 a { color: var(--ink); text-decoration: none; }

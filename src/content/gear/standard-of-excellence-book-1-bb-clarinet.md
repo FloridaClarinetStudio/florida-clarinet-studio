@@ -1,6 +1,6 @@
 ---
 title: "Standard of Excellence Book 1 — Bb Clarinet Recommendation"
-description: "A beginning bb clarinet method book for guided lessons and home practice when assigned by your teacher or band director."
+description: "A beginning Bb clarinet method book for guided lessons and home practice when assigned by your teacher or band director."
 pubDate: "2026-09-13"
 categories: ["Gear"]
 tags: ["Method Books", "Bb Clarinet", "Beginners"]
