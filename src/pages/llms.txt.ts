@@ -18,7 +18,7 @@ export const GET: APIRoute = async () => {
 		'',
 		`> ${site.description}`,
 		'',
-		`${site.name} provides clarinet, saxophone, woodwind, musicianship, and audition-preparation lessons for students in ${site.areas.join(', ')}.`,
+		`${site.name} provides clarinet and saxophone lessons, Band director mentoring, and audition-preparation for students in ${site.areas.join(', ')}.`,
 		'',
 		'## Contact',
 		'',
