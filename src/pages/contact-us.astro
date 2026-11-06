@@ -5,10 +5,10 @@ import { images, site } from '../lib/site';
 
 const page = await getEntry('pages', 'contact-us');
 const Content = page ? (await render(page)).Content : undefined;
-const title = page?.data.title ?? 'Contact Robin Ryon';
+const title = page?.data.title ?? 'Contact Mr.Robin Ryon';
 const description =
 	page?.data.description ??
-	'Contact Robin Ryon for clarinet, saxophone, woodwind, and musicianship lessons.';
+	'Contact Robin Ryon for clarinet and saxophone lessons and Band Director Mentoring.';
 ---
 
 <BaseLayout title={title} description={description} image={images.instruments}>
