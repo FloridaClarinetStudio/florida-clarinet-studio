@@ -1,6 +1,6 @@
 ---
 title: "Florida Clarinet Studio"
-description: "Clarinet, saxophone, woodwind, and musicianship lessons tailored to each student's goals."
+description: "Clarinet and saxophone lessons, band director mentoring and leadership traiing tailored to each individual's goals."
 navTitle: "Home"
 order: 1
 sourceUrl: "https://floridaclarinetstudio.com/main-home-2/"
@@ -14,7 +14,7 @@ Robin Ryon serves Melbourne, Palm Bay, Viera, and the Space Coast of Central Flo
 
 ### Clarinet Lessons
 
-Designed to take students from good to great, from beginners through advanced and pre-professional musicians.
+Designed to take students from good to great, from beginners through advanced and professional musicians.
 
 ### Saxophone Lessons
 
@@ -37,8 +37,12 @@ Musicianship support for students who want to understand how music works, not ju
 
 ## What Students and Families Say
 
-> Robin guided me from early fundamentals and strong practice habits to the life lessons needed for college and even professional music.
+> "I wouldn’t be playing clarinet or saxophone at such a high level without the mentorship of Mr. Robin Ryon. He instills creative inspiration and an unmatched work ethic." – Max White
 
-> The time, thoughtfulness and expertise Mr. Ryon demonstrates translates into ability, confidence, and a love for their instruments.
+> "The time, thoughtfulness and expertise Mr. Ryon demonstrates with both of my sons translates into ability, confidence, and a love for his instrument (and instructor) that is really amazing!" -Josh Miller
 
-> Mr. Ryon knows how to prioritize the work needed for high achievement while building confidence and creativity.
+> "I can’t say enough good things about Robin. His enthusiasm keeps the kids engaged. He not only taught my kids how to play the clarinet beautifully, but also how to appreciate and really understand the music." -David McDaniel
+>"Mr. Ryon is a wonderful teacher. We are so grateful for his skills and expertise. His lessons are fun, convenient, and my kids have learned so much and grown in their confidence, ability to perform and appreciation of music." Kayla Spellman
+> "Mr. Ryon, of The Florida Clarinet Studio, is highly skilled at developing talent. He brings energy, enthusiasm, positive reinforcement and DEEP clarinet expertise. His passion for music, people and clarinet is contagious, enabling his students to enjoy both their musical journey and the destinations, as their abilities ascend to new heights!" – Tim Maroz
+
+> 
