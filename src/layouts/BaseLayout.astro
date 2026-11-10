@@ -59,6 +59,12 @@ const footerLinks = [
 	{ href: site.social.twitter, label: 'X', icon: 'x', external: true },
 	{ href: site.social.youtube, label: 'YouTube', icon: 'youtube', external: true },
 ];
+
+const mobileSocialLinks = [
+	{ href: site.social.instagram, label: 'Instagram', icon: 'instagram' },
+	{ href: site.social.tiktok, label: 'TikTok', icon: 'tiktok' },
+	{ href: site.social.youtube, label: 'YouTube', icon: 'youtube' },
+];
 ---
 
 <!doctype html>
@@ -105,6 +111,15 @@ const footerLinks = [
 					<small>{site.tagline}</small>
 				</span>
 			</a>
+			<nav class="mobile-social-links" aria-label="Social media">
+				{
+					mobileSocialLinks.map((link) => (
+						<a href={link.href} aria-label={link.label} rel="me noopener" target="_blank">
+							<Icon name={link.icon} aria-hidden="true" />
+						</a>
+					))
+				}
+			</nav>
 			<nav aria-label="Primary navigation">
 				{
 					navigation.map((item) => (
@@ -229,6 +244,10 @@ const footerLinks = [
 		background: rgba(255, 250, 240, 0.88);
 		box-shadow: 0 18px 55px rgba(40, 27, 18, 0.13);
 		backdrop-filter: blur(18px);
+	}
+
+	.mobile-social-links {
+		display: none;
 	}
 
 	.brand {
@@ -1058,6 +1077,35 @@ const footerLinks = [
 		.site-footer {
 			grid-template-columns: 1fr;
 			padding-inline: 1.25rem;
+		}
+
+		.mobile-social-links {
+			display: flex;
+			gap: 0.4rem;
+		}
+
+		.mobile-social-links a {
+			display: inline-grid;
+			place-items: center;
+			width: 2.75rem;
+			height: 2.75rem;
+			border: 1px solid var(--line);
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.58);
+			color: var(--accent-strong);
+			text-decoration: none;
+		}
+
+		.mobile-social-links a:hover,
+		.mobile-social-links a:focus-visible {
+			border-color: var(--accent);
+			background: #fff;
+			color: var(--accent);
+		}
+
+		.mobile-social-links [data-icon] {
+			width: 1.2rem;
+			height: 1.2rem;
 		}
 
 		nav {
