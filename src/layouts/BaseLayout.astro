@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { footerNavigation, navigation, site } from '../lib/site';
+import { footerNavigation, navigation, secondaryNavigation, site } from '../lib/site';
 import { absoluteUrl, buildJsonLd, canonicalUrl, fullTitle } from '../lib/seo';
 
 interface Props {
@@ -65,6 +65,9 @@ const mobileSocialLinks = [
 	{ href: site.social.tiktok, label: 'TikTok', icon: 'tiktok' },
 	{ href: site.social.youtube, label: 'YouTube', icon: 'youtube' },
 ];
+
+const isCurrentPage = (href: string) =>
+	href === '/' ? Astro.url.pathname === href : Astro.url.pathname.startsWith(href);
 ---
 
 <!doctype html>
@@ -120,15 +123,27 @@ const mobileSocialLinks = [
 					))
 				}
 			</nav>
-			<nav aria-label="Primary navigation">
-				{
-					navigation.map((item) => (
-						<a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>
-							{item.label}
-						</a>
-					))
-				}
-			</nav>
+			<div class="header-navigation">
+				<nav class="primary-navigation" aria-label="Primary navigation">
+					{
+						navigation.map((item) => (
+							<a href={item.href} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>
+								{item.label}
+							</a>
+						))
+					}
+				</nav>
+				<nav class="secondary-navigation" aria-label="Resource navigation">
+					<span>Resources</span>
+					{
+						secondaryNavigation.map((item) => (
+							<a href={item.href} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>
+								{item.label}
+							</a>
+						))
+					}
+				</nav>
+			</div>
 		</header>
 		<main>
 			<slot />
@@ -145,7 +160,7 @@ const mobileSocialLinks = [
 					{
 						footerNavigation.map((item) => (
 							<li>
-								<a href={item.href} aria-current={Astro.url.pathname === item.href ? 'page' : undefined}>
+								<a href={item.href} aria-current={isCurrentPage(item.href) ? 'page' : undefined}>
 									{item.label}
 								</a>
 							</li>
@@ -248,6 +263,31 @@ const mobileSocialLinks = [
 
 	.mobile-social-links {
 		display: none;
+	}
+
+	.header-navigation {
+		display: grid;
+		justify-items: end;
+		gap: 0.4rem;
+	}
+
+	.secondary-navigation {
+		width: 100%;
+		align-items: center;
+		padding-top: 0.4rem;
+		border-top: 1px solid var(--line);
+		color: var(--muted);
+		font-size: 0.78rem;
+	}
+
+	.secondary-navigation span {
+		font-weight: 800;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+
+	.secondary-navigation a {
+		color: var(--muted);
 	}
 
 	.brand {
@@ -1107,6 +1147,15 @@ const mobileSocialLinks = [
 		.mobile-social-links [data-icon] {
 			width: 1.2rem;
 			height: 1.2rem;
+		}
+
+		.header-navigation {
+			justify-items: start;
+		}
+
+		.primary-navigation,
+		.secondary-navigation {
+			justify-content: flex-start;
 		}
 
 		nav {
