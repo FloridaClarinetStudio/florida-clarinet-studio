@@ -27,6 +27,7 @@ export const navigation = [
 	{ href: '/clarinet-lessons/', label: 'Clarinet Lessons' },
 	{ href: '/saxophone-lessons/', label: 'Saxophone Lessons' },
 	{ href: '/gear/', label: 'Gear' },
+	{ href: '/blog/', label: 'Blog' },
 	{ href: '/band-directors/', label: 'Band Directors' },
 	{ href: '/contact-us/', label: 'Contact' },
 ];
