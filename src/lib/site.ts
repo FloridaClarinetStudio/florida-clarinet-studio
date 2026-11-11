@@ -26,13 +26,13 @@ export const navigation = [
 	{ href: '/about-us/', label: 'About Robin' },
 	{ href: '/clarinet-lessons/', label: 'Clarinet Lessons' },
 	{ href: '/saxophone-lessons/', label: 'Saxophone Lessons' },
-	{ href: '/listening-list/', label: 'Listening List' },
 	{ href: '/gear/', label: 'Gear' },
 	{ href: '/band-directors/', label: 'Band Directors' },
 	{ href: '/contact-us/', label: 'Contact' },
 ];
 
 export const footerNavigation = [
+	{ href: '/listening-list/', label: 'Listening List' },
 	{ href: '/recs/', label: 'Recommendations' },
 ];
 
