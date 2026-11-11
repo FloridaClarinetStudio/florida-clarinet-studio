@@ -81,10 +81,10 @@ export const pageImages = {
 	'clarinet-lessons': images.studioCase,
 	'contact-us': images.instruments,
 	'faq-page': images.studioCase,
-	'listening-list': images.haroldWright,
+	'listening-list': images.studioCase,
 	'listening-list/harold-wright': images.haroldWright,
 	'listening-list/robert-marcellus': images.robertMarcellus,
-	'listening-list/ignatius-gennusa': images.haroldWright,
+	'listening-list/ignatius-gennusa': images.instruments,
 	'recs': images.instruments,
 	'saxophone-lessons': images.instruments,
 };

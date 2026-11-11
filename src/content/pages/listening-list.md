@@ -12,10 +12,36 @@ Students improve faster when they listen to excellent players. A strong listenin
 
 ## Clarinet Artists to Know
 
-- [Harold Wright](/listening-list/harold-wright/) - principal clarinetist of the Boston Symphony Orchestra from 1970 to 1993, and an essential model for orchestral clarinet tone and phrasing.
-- [Robert Marcellus](/listening-list/robert-marcellus/) - principal clarinetist of the Cleveland Orchestra from 1953 to 1973, and one of the most important American clarinet teachers and performers.
-- [Ignatius Gennusa](/listening-list/ignatius-gennusa/) - a lyrical American orchestral clarinetist whose recordings are useful models for line, color, and chamber-music sensitivity.
-- [CLARINETISTS on Spotify](https://open.spotify.com/playlist/4gpGC4yxNRVkoW06zd92Wp) - a Spotify playlist for exploring more clarinet performers and recordings.
+Each artist has a complete collection of recordings on this site. Choose an artist to open the full listening list.
+
+<div class="grid listening-grid">
+  <article class="card photo-card listening-card">
+    <img src="/images/original/harold-wright.jpg" alt="Clarinetist Harold Wright" loading="lazy" />
+    <div>
+      <h3>Harold Wright</h3>
+      <p>Eleven recordings from an essential model for orchestral clarinet tone, elegance, and phrasing.</p>
+      <a href="/listening-list/harold-wright/">Listen to Harold Wright</a>
+    </div>
+  </article>
+  <article class="card photo-card listening-card">
+    <img src="/images/original/robert-marcellus.jpg" alt="Clarinetist Robert Marcellus" loading="lazy" />
+    <div>
+      <h3>Robert Marcellus</h3>
+      <p>Six recordings from one of the most important American clarinet performers and teachers.</p>
+      <a href="/listening-list/robert-marcellus/">Listen to Robert Marcellus</a>
+    </div>
+  </article>
+  <article class="card photo-card listening-card">
+    <img src="/images/original/instruments.jpg" alt="Clarinets and saxophones used in music study" loading="lazy" />
+    <div>
+      <h3>Ignatius Gennusa</h3>
+      <p>Four recordings that model long line, color changes, lyrical playing, and chamber-style response.</p>
+      <a href="/listening-list/ignatius-gennusa/">Listen to Ignatius Gennusa</a>
+    </div>
+  </article>
+</div>
+
+[Explore the broader CLARINETISTS playlist on Spotify](https://open.spotify.com/playlist/4gpGC4yxNRVkoW06zd92Wp).
 
 <iframe title="CLARINETISTS Spotify playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4gpGC4yxNRVkoW06zd92Wp?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
