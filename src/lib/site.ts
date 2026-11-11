@@ -38,6 +38,7 @@ export const secondaryNavigation = [
 ];
 
 export const footerNavigation = [
+	{ href: '/blog/', label: 'Blog' },
 	{ href: '/listening-list/', label: 'Listening List' },
 	{ href: '/recs/', label: 'Recommendations' },
 ];
