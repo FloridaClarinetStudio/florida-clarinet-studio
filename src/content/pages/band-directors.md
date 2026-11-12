@@ -5,7 +5,7 @@ navTitle: "Band Directors"
 order: 5
 ---
 
-## Practical Support for School Music Programs
+## Proven, Practical and Professional Support for School Music Programs
 
 Robin works with band directors who want focused woodwind support, stronger student preparation, and practical reinforcement for the musical goals already happening in the classroom.
 
