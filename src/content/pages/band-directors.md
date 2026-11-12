@@ -1,6 +1,6 @@
 ---
 title: "Band Director Support"
-description: "Woodwind clinics, sectionals, audition preparation, leadership coaching, and practical support for school music programs across the Space Coast and beyond."
+description: "Woodwind clinics, sectionals, MPA preparation, leadership coaching, and practical support for school music programs across the Space Coast and beyond."
 navTitle: "Band Directors"
 order: 5
 ---
