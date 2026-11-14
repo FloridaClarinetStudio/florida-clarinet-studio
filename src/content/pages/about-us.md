@@ -21,7 +21,7 @@ For almost four decades, Robin has specialized in Bb clarinet, Eb clarinet, bass
 
 Robin Ryon was raised in Baltimore, Maryland, and has lived in Florida since July 2001. In high school and college, he studied with members of the Baltimore Symphony Orchestra clarinet section, including weekly lessons with Christopher Wolfe and Edward Palanker.
 
-Mr. Ryon received his Bachelor of Science in Music Education from Towson University. Since 2006, he has taught private students full time, working with high school, middle school, college, adult, and school band musicians. He added Zoom lessons in 2017.
+Mr. Ryon received his Bachelor of Science in Music Education from Towson University. Since 2006, he has taught private students full time, working with high school, middle school, college, adult, and school band musicians. He added Zoom, Facetime, Google Hangouts and Whatsapp lessons in 2017.
 
 ## Robin's Teaching Focus
 
