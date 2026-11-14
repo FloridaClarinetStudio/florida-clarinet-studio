@@ -631,8 +631,26 @@ const isCurrentPage = (href: string) =>
 	}
 
 	.quote-scroller:hover .quote-track,
-	.quote-scroller:focus-within .quote-track {
+	.quote-scroller:focus-within .quote-track,
+	.quote-scroller.is-paused .quote-track {
 		animation-play-state: paused;
+	}
+
+	.testimonial-toggle {
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		padding: 0.5rem 0.85rem;
+		background: #fffaf1;
+		color: var(--accent-strong);
+		font: inherit;
+		font-size: 0.86rem;
+		font-weight: 700;
+		cursor: pointer;
+	}
+
+	.testimonial-toggle:focus-visible {
+		outline: 3px solid var(--gold);
+		outline-offset: 3px;
 	}
 
 	.quote-track blockquote {
@@ -819,6 +837,10 @@ const isCurrentPage = (href: string) =>
 
 	.recommendation-copy {
 		max-width: 680px;
+	}
+
+	.recommendation-copy h1 {
+		font-size: clamp(2.75rem, 4vw, 4rem);
 	}
 
 	.recommendation-image {
@@ -1191,6 +1213,9 @@ const isCurrentPage = (href: string) =>
 	}
 
 	@media (prefers-reduced-motion: reduce) {
+		.testimonial-toggle {
+			display: none;
+		}
 		.quote-scroller {
 			overflow-x: auto;
 			scroll-snap-type: x mandatory;
