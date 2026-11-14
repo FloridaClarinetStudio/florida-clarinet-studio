@@ -1,6 +1,6 @@
 ---
-title: "About Robin Ryon"
-description: "Meet Robin Ryon, a Space Coast music educator helping clarinet and saxophone students build skill, confidence, discipline, and expressive musicianship."
+title: "About Mr. Robin Ryon"
+description: "Meet Robin Ryon, a Florida music educator helping clarinet and saxophone students build skill, confidence, discipline, and expressive musicianship."
 navTitle: "About"
 order: 2
 sourceUrl: "https://floridaclarinetstudio.com/about-us/"
