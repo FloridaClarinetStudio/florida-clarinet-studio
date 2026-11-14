@@ -16,7 +16,7 @@ For almost four decades, Robin has specialized in Bb clarinet, Eb clarinet, bass
 
 <figure class="content-image portrait">
   <img src="/images/original/mr-robin-ryon.jpg" alt="Robin Ryon, Clarinet and Saxophone Instructor" loading="lazy" />
-  <figcaption>Robin Ryon, Clarinet and Saxophone Instructor</figcaption>
+  <figcaption>Robin Ryon, Clarinet, Saxophone Instructor, Band Director Mentor</figcaption>
 </figure>
 
 Robin Ryon was raised in Baltimore, Maryland, and has lived in Florida since July 2001. In high school and college, he studied with members of the Baltimore Symphony Orchestra clarinet section, including weekly lessons with Christopher Wolfe and Edward Palanker.
