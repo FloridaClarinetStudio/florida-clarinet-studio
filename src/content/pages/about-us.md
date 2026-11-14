@@ -8,9 +8,9 @@ sourceUrl: "https://floridaclarinetstudio.com/about-us/"
 
 ## Building Musical Confidence, Creativity, Discipline, and Self-Expression
 
-Robin Ryon teaches clarinet and saxophone students on the Space Coast of Central Florida, helping them become stronger musicians and more confident, disciplined people. His lessons combine serious music instruction with life skills that last beyond the practice room and concert stage.
+Robin Ryon teaches clarinet and saxophone students on the Space Coast of Central Florida, helping them become stronger musicians and more confident, disciplined people. His lessons combine serious music instruction with life skills that last beyond the practice room and concert stage. Robin also mentors band directors in Florida and across the country helping build programs, level up musicianship and whole ensemble quality.
 
-For more than three decades, Robin has specialized in Bb clarinet, Eb clarinet, bass clarinet, alto saxophone, and tenor saxophone for students of many ages and experience levels. He helps students prepare for All-County, All-State, college auditions, school band leadership, solo and ensemble, and personal musical growth.
+For almost four decades, Robin has specialized in Bb clarinet, Eb clarinet, bass clarinet, alto saxophone, and tenor saxophone for students of many ages and experience levels. He helps students prepare for All-County, All-State, college auditions, school band leadership, solo and ensemble, and personal musical growth.
 
 ## Meet Mr. Ryon
 
