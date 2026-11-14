@@ -6,7 +6,7 @@ order: 2
 sourceUrl: "https://floridaclarinetstudio.com/about-us/"
 ---
 
-## Build Confidence, Creativity, Discipline, and Self-Expression
+## Building Musical Confidence, Creativity, Discipline, and Self-Expression
 
 Robin Ryon teaches clarinet and saxophone students on the Space Coast of Central Florida, helping them become stronger musicians and more confident, disciplined people. His lessons combine serious music instruction with life skills that last beyond the practice room and concert stage.
 
