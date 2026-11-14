@@ -1,11 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { getEntry, render } from 'astro:content';
+import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { images, site } from '../lib/site';
 
 const home = await getEntry('pages', 'home');
-const Content = home ? (await render(home)).Content : undefined;
 const socialProof = [
 	{
 		href: site.social.instagram,
@@ -43,7 +42,7 @@ const socialProof = [
 				</p>
 				<div class="actions">
 					<a class="button" href="/contact-us/">{site.primaryCta}</a>
-					<a class="button secondary" href="/contact-us/">Contact Robin</a>
+					<a class="button secondary" href="/clarinet-lessons/">View lesson options</a>
 				</div>
 			</div>
 			<aside class="hero-panel" aria-label="Robin Ryon contact information">
@@ -72,7 +71,7 @@ const socialProof = [
 		<h2>Focused instruction for the milestones that matter.</h2>
 		<p class="lede">
 			From the first notes on the horn to college audition preparation, each lesson is built
-			around concrete musical growth and durable practice habits. Wedon't just create great musicians, we create great human beings!
+			around concrete musical growth and durable practice habits. The goal is not only stronger musicianship, but greater discipline and confidence.
 		</p>
 	</section>
 
@@ -180,7 +179,8 @@ const socialProof = [
 		<div class="testimonial-band">
 			<p class="kicker">Student and Parent Voices</p>
 			<h2>Families value the blend of expertise, care, and high expectations.</h2>
-			<div class="quote-scroller" aria-label="Scrolling student and parent reviews">
+			<button class="testimonial-toggle" type="button" aria-pressed="false" aria-controls="testimonial-quotes">Pause moving testimonials</button>
+			<div class="quote-scroller" id="testimonial-quotes" aria-label="Student and parent reviews">
 				<div class="quote-track">
 					<blockquote>
 						<p>Robin guided me from early fundamentals and strong practice habits to the life lessons needed for college and professional music.</p>
@@ -209,15 +209,15 @@ const socialProof = [
 		</div>
 	</section>
 
-	{
-		Content && (
-			<section class="band">
-				<div class="content-page">
-					<article>
-						<Content />
-					</article>
-				</div>
-			</section>
-		)
-	}
 </BaseLayout>
+
+<script>
+	const testimonialToggle = document.querySelector<HTMLButtonElement>('.testimonial-toggle');
+	const testimonialScroller = document.querySelector<HTMLElement>('.quote-scroller');
+
+	testimonialToggle?.addEventListener('click', () => {
+		const paused = testimonialScroller?.classList.toggle('is-paused') ?? false;
+		testimonialToggle.setAttribute('aria-pressed', String(paused));
+		testimonialToggle.textContent = paused ? 'Resume moving testimonials' : 'Pause moving testimonials';
+	});
+</script>

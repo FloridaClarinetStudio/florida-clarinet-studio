@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { gearImages, images } from '../../lib/site';
 import { withAmazonAffiliateTag } from '../../lib/affiliate';
+import { getGearGuidance } from '../../lib/gear-guidance';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('gear', ({ data }) => !data.draft);
@@ -21,6 +22,7 @@ const productName = post.data.productName ?? post.data.title;
 const image = post.data.productImage
 	? { src: post.data.productImage, alt: `${productName} product image` }
 	: gearImages[slug as keyof typeof gearImages] ?? images.studioCase;
+const guidance = getGearGuidance(slug);
 ---
 
 <BaseLayout
@@ -38,11 +40,14 @@ const image = post.data.productImage
 				<h1>{post.data.title}</h1>
 				{
 					post.data.productUrl && (
-						<div class="actions">
-							<a class="button" href={withAmazonAffiliateTag(post.data.productUrl)} rel="nofollow sponsored noopener" target="_blank">
-								Find on Amazon
-							</a>
-						</div>
+						<>
+							<div class="actions">
+								<a class="button" href={withAmazonAffiliateTag(post.data.productUrl)} rel="nofollow sponsored noopener" target="_blank">
+									Find on Amazon
+								</a>
+							</div>
+							<p class="affiliate-disclosure">As an Amazon Associate, Florida Clarinet Studio earns from qualifying purchases. Your price is unchanged.</p>
+						</>
 					)
 				}
 			</div>
@@ -54,6 +59,27 @@ const image = post.data.productImage
 	<section class="content-page">
 		<article>
 			<Content />
+			<section class="selection-guide" aria-labelledby="selection-guide-heading">
+				<p class="kicker">Studio selection guide</p>
+				<h2 id="selection-guide-heading">Is this the right fit?</h2>
+				<div class="selection-guide__grid">
+					<div><h3>Instrument</h3><p>{guidance.instrument}</p></div>
+					<div><h3>Best for</h3><p>{guidance.bestFor}</p></div>
+					<div><h3>How it supports lessons</h3><p>{guidance.teachingUse}</p></div>
+					<div><h3>Check before buying</h3><p>{guidance.checkBeforeBuying}</p></div>
+				</div>
+				<p><strong>Not sure?</strong> <a href="/contact-us/">Ask Robin before ordering</a>, especially for reeds, mouthpieces, and ligatures.</p>
+			</section>
 		</article>
 	</section>
 </BaseLayout>
+
+<style>
+	.affiliate-disclosure { max-width: 55ch; margin-top: 0.8rem; color: #f8dfb5; font-size: 0.84rem; }
+	.selection-guide { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+	.selection-guide__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-block: 1.25rem; }
+	.selection-guide__grid > div { padding: 1rem; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+	.selection-guide__grid h3 { margin-bottom: 0.35rem; font-size: 1rem; }
+	.selection-guide__grid p { margin: 0; color: var(--muted); }
+	@media (max-width: 700px) { .selection-guide__grid { grid-template-columns: 1fr; } }
+</style>
