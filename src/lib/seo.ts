@@ -1,4 +1,4 @@
-import { site } from './site';
+import { images, site } from './site';
 
 type ImageLike = {
 	src: string;
@@ -97,7 +97,7 @@ export function buildJsonLd({
 		worksFor: { '@id': organizationId },
 		affiliation: { '@id': organizationId },
 		url: new URL('/about-us/', site.url).toString(),
-		image: absoluteUrl('/images/original/mr-ryon.jpg'),
+		image: absoluteUrl(images.mrRyon.src),
 		sameAs: [
 			site.social.facebook,
 			site.social.instagram,

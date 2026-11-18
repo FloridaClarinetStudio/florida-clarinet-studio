@@ -24,7 +24,7 @@ const image = pageImages[slug as keyof typeof pageImages];
 
 <BaseLayout title={page.data.title} description={description} image={image}>
 	<section class="page-hero">
-		{image && <img src={image.src} alt={image.alt} loading="eager" />}
+		{image && <img class:list={{ 'page-hero-portrait': slug === 'about-us' }} src={image.src} alt={image.alt} loading="eager" />}
 		<div class="page-hero-content">
 			<p class="kicker">{page.data.navTitle ?? 'Page'}</p>
 			<h1>{page.data.title}</h1>
@@ -37,3 +37,18 @@ const image = pageImages[slug as keyof typeof pageImages];
 		</article>
 	</section>
 </BaseLayout>
+
+<style>
+	.page-hero-portrait {
+		object-position: center 22%;
+	}
+
+	@media (min-width: 821px) {
+		.page-hero img.page-hero-portrait {
+			left: auto;
+			width: min(48%, 640px);
+			object-position: center 16%;
+			mask-image: linear-gradient(to right, transparent, black 30%);
+		}
+	}
+</style>

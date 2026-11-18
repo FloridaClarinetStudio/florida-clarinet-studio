@@ -73,16 +73,13 @@ export const images = {
     alt: "A folding clarinet stand",
   },
   mrRyon: {
-    src: "/images/original/mr-robin-ryon.jpg",
-    alt: "Robin Ryon smiling with two students",
+    src: "/images/original/mr-robin-ryon.webp",
+    alt: "Portrait of Robin Ryon",
   },
 };
 
 export const pageImages = {
-	'about-us': {
-		src: '/images/original/mr-ryon.jpg',
-		alt: 'Robin Ryon smiling with two students',
-	},
+	'about-us': images.mrRyon,
 	'band-directors': images.bandListening,
 	'clarinet-lessons': images.studioCase,
 	'contact-us': images.instruments,
