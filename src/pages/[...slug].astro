@@ -20,17 +20,26 @@ const { Content } = await render(page);
 const description = page.data.description;
 const slug = page.id.replace(/\.(md|mdx)$/, '');
 const image = pageImages[slug as keyof typeof pageImages];
-const hasPortraitHero = slug === 'about-us' || slug === 'listening-list/ignatius-gennusa';
+const isGennusaPage = slug === 'listening-list/ignatius-gennusa';
 ---
 
 <BaseLayout title={page.data.title} description={description} image={image}>
-	<section class="page-hero">
-		{image && <img class:list={{ 'page-hero-portrait': hasPortraitHero }} src={image.src} alt={image.alt} loading="eager" />}
+	<section class:list={['page-hero', { 'gennusa-hero': isGennusaPage }]}>
 		<div class="page-hero-content">
 			<p class="kicker">{page.data.navTitle ?? 'Page'}</p>
 			<h1>{page.data.title}</h1>
 			{page.data.description && <p class="lede">{page.data.description}</p>}
 		</div>
+		{image && (
+			<img
+				class:list={{ 'page-hero-portrait': slug === 'about-us' }}
+				src={image.src}
+				alt={image.alt}
+				width={isGennusaPage ? 960 : undefined}
+				height={isGennusaPage ? 1273 : undefined}
+				loading="eager"
+			/>
+		)}
 	</section>
 	<section class="content-page">
 		<article>
@@ -42,6 +51,46 @@ const hasPortraitHero = slug === 'about-us' || slug === 'listening-list/ignatius
 <style>
 	.page-hero-portrait {
 		object-position: center 22%;
+	}
+
+	.gennusa-hero {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+		align-items: center;
+		gap: clamp(2rem, 5vw, 5rem);
+		padding: 9rem max(1.25rem, calc((100% - var(--max)) / 2 + 1.25rem)) 4rem;
+	}
+
+	.gennusa-hero::after {
+		content: none;
+	}
+
+	.gennusa-hero .page-hero-content {
+		margin: 0;
+		padding: 0;
+	}
+
+	.gennusa-hero h1 {
+		max-width: none;
+		font-size: clamp(2rem, 5.5vw, 5.4rem);
+		text-wrap: balance;
+	}
+
+	.gennusa-hero img {
+		position: static;
+		width: min(100%, 360px);
+		height: auto;
+		border-radius: 8px;
+		object-fit: contain;
+		opacity: 1;
+	}
+
+	@media (max-width: 820px) {
+		.gennusa-hero {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 1rem;
+			padding-block: 7.5rem 3rem;
+		}
 	}
 
 	@media (min-width: 821px) {

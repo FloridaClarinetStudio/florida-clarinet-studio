@@ -562,7 +562,7 @@ const isCurrentPage = (href: string) =>
 
 	.listening-grid {
 		grid-template-columns: repeat(3, minmax(180px, 1fr));
-		align-items: start;
+		grid-auto-rows: 1fr;
 		margin-block: 1.5rem;
 	}
 
@@ -678,7 +678,19 @@ const isCurrentPage = (href: string) =>
 	}
 
 	.listening-card {
+		display: grid;
+		grid-template-rows: auto 1fr;
 		color: var(--ink);
+	}
+
+	.listening-card > div {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.listening-card a {
+		margin-top: auto;
 	}
 
 	.listening-card img {
