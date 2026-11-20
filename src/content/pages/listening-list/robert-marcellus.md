@@ -13,6 +13,10 @@ sourceUrl: "https://floridaclarinetstudio.com/meat-the-team/"
 
 Robert Marcellus remains one of the most important American clarinet teachers and performers. Students can listen for centered sound, clear direction, and refined orchestral style.
 
+## Northwestern University Master Classes
+
+Explore [Robert Marcellus’s Master Class Audio Archives](https://dc.library.northwestern.edu/search?collection=Robert+Marcellus+Master+Class+Audio+Archives), a collection of clarinet master classes recorded at Northwestern University from 1977 to 1990.
+
 <iframe title="Robert Marcellus listening example 1" width="100%" height="200" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?visual=false&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F434897685&amp;show_artwork=true&amp;auto_play=false&amp;buying=true&amp;liking=true&amp;download=true&amp;sharing=true&amp;show_comments=true&amp;show_playcount=true&amp;show_user=true"></iframe>
 
 <iframe title="Robert Marcellus listening example 2" width="100%" height="200" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?visual=false&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F64196295&amp;show_artwork=true&amp;auto_play=false&amp;buying=true&amp;liking=true&amp;download=true&amp;sharing=true&amp;show_comments=true&amp;show_playcount=true&amp;show_user=true"></iframe>
