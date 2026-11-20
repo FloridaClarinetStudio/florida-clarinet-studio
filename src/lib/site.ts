@@ -64,6 +64,10 @@ export const images = {
     src: "/images/original/robert-marcellus.jpg",
     alt: "Clarinetist Robert Marcellus",
   },
+  ignatiusGennusa: {
+    src: "/images/original/ignatius-gennusa.webp",
+    alt: "Clarinetist Ignatius Gennusa holding his clarinet",
+  },
   vandorenReeds: {
     src: "/images/original/vandoren-clarinet-reeds.jpg",
     alt: "Vandoren clarinet reeds",
@@ -87,7 +91,7 @@ export const pageImages = {
 	'listening-list': images.studioCase,
 	'listening-list/harold-wright': images.haroldWright,
 	'listening-list/robert-marcellus': images.robertMarcellus,
-	'listening-list/ignatius-gennusa': images.instruments,
+	'listening-list/ignatius-gennusa': images.ignatiusGennusa,
 	'recs': images.instruments,
 	'saxophone-lessons': images.instruments,
 };

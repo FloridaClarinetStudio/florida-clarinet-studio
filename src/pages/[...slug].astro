@@ -20,11 +20,12 @@ const { Content } = await render(page);
 const description = page.data.description;
 const slug = page.id.replace(/\.(md|mdx)$/, '');
 const image = pageImages[slug as keyof typeof pageImages];
+const hasPortraitHero = slug === 'about-us' || slug === 'listening-list/ignatius-gennusa';
 ---
 
 <BaseLayout title={page.data.title} description={description} image={image}>
 	<section class="page-hero">
-		{image && <img class:list={{ 'page-hero-portrait': slug === 'about-us' }} src={image.src} alt={image.alt} loading="eager" />}
+		{image && <img class:list={{ 'page-hero-portrait': hasPortraitHero }} src={image.src} alt={image.alt} loading="eager" />}
 		<div class="page-hero-content">
 			<p class="kicker">{page.data.navTitle ?? 'Page'}</p>
 			<h1>{page.data.title}</h1>

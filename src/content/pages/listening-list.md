@@ -32,7 +32,7 @@ Each artist has a complete collection of recordings on this site. Choose an arti
     </div>
   </article>
   <article class="card photo-card listening-card">
-    <img src="/images/original/instruments.jpg" alt="Clarinets and saxophones used in music study" loading="lazy" />
+    <img src="/images/original/ignatius-gennusa.webp" alt="Clarinetist Ignatius Gennusa holding his clarinet" width="960" height="1273" loading="lazy" />
     <div>
       <h3>Ignatius Gennusa</h3>
       <p>Four recordings that model long line, color changes, lyrical playing, and chamber-style response.</p>
